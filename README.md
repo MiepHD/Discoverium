@@ -41,6 +41,9 @@ If you can't find the configuration for an app you want, feel free to create an 
 ### Vetting
 I haven't created a policy or process yet.
 
+## How it works
+See [How it works](docs/HOWITWORKS.md).
+
 ## Fork
 Discoverium is a fork of [Obtainium](https://github.com/ImranR98/Obtainium). [Obtainium](https://github.com/ImranR98/Obtainium) is great, but it is missing one feature. That feature is a search function for application discovery, like a repository or store. As far as can be told the lack of the feature is very intentional.
 
