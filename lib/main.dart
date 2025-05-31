@@ -220,6 +220,10 @@ class _ObtainiumState extends State<Obtainium> {
       notifs.checkLaunchByNotif();
     });
 
+    // Calculate font size based on screen width (proportional to smallest width)
+    final screenWidth = MediaQuery.of(context).size.width;
+    final navBarFontSize = _calculateNavigationBarFontSize(screenWidth);
+
     return DynamicColorBuilder(
         builder: (ColorScheme? lightDynamic, ColorScheme? darkDynamic) {
       // Decide on a colour/brightness scheme based on OS and user settings
@@ -259,17 +263,73 @@ class _ObtainiumState extends State<Obtainium> {
                   ? darkColorScheme
                   : lightColorScheme,
               fontFamily:
-                  settingsProvider.useSystemFont ? 'SystemFont' : 'Montserrat'),
+                  settingsProvider.useSystemFont ? 'SystemFont' : 'Montserrat',
+              textButtonTheme: TextButtonThemeData(
+                style: TextButton.styleFrom(
+                  textStyle: const TextStyle(fontSize: 12),
+                ),
+              ),
+              elevatedButtonTheme: ElevatedButtonThemeData(
+                style: ElevatedButton.styleFrom(
+                  textStyle: const TextStyle(fontSize: 12),
+                ),
+              ),
+              outlinedButtonTheme: OutlinedButtonThemeData(
+                style: OutlinedButton.styleFrom(
+                  textStyle: const TextStyle(fontSize: 12),
+                ),
+              ),
+              navigationBarTheme: NavigationBarThemeData(
+                labelTextStyle: WidgetStatePropertyAll(
+                  TextStyle(fontSize: navBarFontSize),
+                ),
+              ),),
           darkTheme: ThemeData(
               useMaterial3: true,
               colorScheme: settingsProvider.theme == ThemeSettings.light
                   ? lightColorScheme
                   : darkColorScheme,
               fontFamily:
-                  settingsProvider.useSystemFont ? 'SystemFont' : 'Montserrat'),
+                  settingsProvider.useSystemFont ? 'SystemFont' : 'Montserrat',
+              textButtonTheme: TextButtonThemeData(
+                style: TextButton.styleFrom(
+                  textStyle: const TextStyle(fontSize: 12),
+                ),
+              ),
+              elevatedButtonTheme: ElevatedButtonThemeData(
+                style: ElevatedButton.styleFrom(
+                  textStyle: const TextStyle(fontSize: 12),
+                ),
+              ),
+              outlinedButtonTheme: OutlinedButtonThemeData(
+                style: OutlinedButton.styleFrom(
+                  textStyle: const TextStyle(fontSize: 12),
+                ),
+              ),
+              navigationBarTheme: NavigationBarThemeData(
+                labelTextStyle: WidgetStatePropertyAll(
+                  TextStyle(fontSize: navBarFontSize),
+                ),
+              ),),
           home: Shortcuts(shortcuts: <LogicalKeySet, Intent>{
             LogicalKeySet(LogicalKeyboardKey.select): const ActivateIntent(),
           }, child: const HomePage()));
     });
+  }
+
+  // Calculate navigation bar font size based on screen width
+  // Font size 8 for 360dp width, font size 12 for 527dp width
+  double _calculateNavigationBarFontSize(double screenWidth) {
+    const double minWidth = 360.0;
+    const double maxWidth = 527.0;
+    const double minFontSize = 8.0;
+    const double maxFontSize = 12.0;
+
+    // Clamp the width to the specified range
+    final clampedWidth = screenWidth.clamp(minWidth, maxWidth);
+
+    // Linear interpolation
+    final ratio = (clampedWidth - minWidth) / (maxWidth - minWidth);
+    return minFontSize + (ratio * (maxFontSize - minFontSize));
   }
 }
