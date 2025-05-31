@@ -47,6 +47,9 @@ app.*.map.json
 /android/app/release
 /android/app/.cxx
 
+# Android keystore properties
+/android/keystore.properties
+
 # Custom
 TODO.txt
 data
