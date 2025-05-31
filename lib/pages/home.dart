@@ -11,6 +11,7 @@ import 'package:obtainium/custom_errors.dart';
 import 'package:obtainium/pages/add_app.dart';
 import 'package:obtainium/pages/apps.dart';
 import 'package:obtainium/pages/import_export.dart';
+import 'package:obtainium/pages/search.dart';
 import 'package:obtainium/pages/settings.dart';
 import 'package:obtainium/providers/apps_provider.dart';
 import 'package:obtainium/providers/settings_provider.dart';
@@ -47,6 +48,8 @@ class _HomePageState extends State<HomePage> {
         AppsPage(key: GlobalKey<AppsPageState>())),
     NavigationPageItem(
         tr('addApp'), Icons.add, AddAppPage(key: GlobalKey<AddAppPageState>())),
+    NavigationPageItem(tr('search'), Icons.search,
+        SearchPage(key: GlobalKey<SearchPageState>())),
     NavigationPageItem(
         tr('importExport'), Icons.import_export, const ImportExportPage()),
     NavigationPageItem(tr('settings'), Icons.settings, const SettingsPage())
@@ -72,11 +75,11 @@ class _HomePageState extends State<HomePage> {
                     GestureDetector(
                         onTap: () {
                           launchUrlString(
-                              'https://github.com/ImranR98/Obtainium/blob/main/README.md',
+                              'https://github.com/cygnusx-1-org/Discoverium/blob/main/README.md',
                               mode: LaunchMode.externalApplication);
                         },
                         child: Text(
-                          'https://github.com/ImranR98/Obtainium/blob/main/README.md',
+                          'https://github.com/cygnusx-1-org/Discoverium/blob/main/README.md',
                           style: const TextStyle(
                               decoration: TextDecoration.underline,
                               fontWeight: FontWeight.bold),

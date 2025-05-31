@@ -642,19 +642,6 @@ class AddAppPageState extends State<AddAppPage> {
                         decoration: TextDecoration.underline,
                         fontStyle: FontStyle.italic),
                   )),
-              GestureDetector(
-                onTap: () {
-                  launchUrlString('https://apps.obtainium.imranr.dev/',
-                      mode: LaunchMode.externalApplication);
-                },
-                child: Text(
-                  tr('crowdsourcedConfigsShort'),
-                  style: const TextStyle(
-                      fontWeight: FontWeight.bold,
-                      decoration: TextDecoration.underline,
-                      fontStyle: FontStyle.italic),
-                ),
-              ),
             ],
           ),
         );

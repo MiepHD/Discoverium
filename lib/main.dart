@@ -179,8 +179,8 @@ class _ObtainiumState extends State<Obtainium> {
     } else {
       bool isFirstRun = settingsProvider.checkAndFlipFirstRun();
       if (isFirstRun) {
-        logs.add('This is the first ever run of Obtainium.');
-        // If this is the first run, ask for notification permissions and add Obtainium to the Apps list
+        logs.add('This is the first ever run of Discoverium.');
+        // If this is the first run, ask for notification permissions and add Discoverium to the Apps list
         Permission.notification.request();
         if (!fdroid) {
           getInstalledInfo(obtainiumId).then((value) {
@@ -189,8 +189,8 @@ class _ObtainiumState extends State<Obtainium> {
                 App(
                     obtainiumId,
                     obtainiumUrl,
-                    'ImranR98',
-                    'Obtainium',
+                    'cygnusx-1-org',
+                    'Discoverium',
                     value!.versionName,
                     value.versionName!,
                     [],
@@ -247,7 +247,7 @@ class _ObtainiumState extends State<Obtainium> {
       if (settingsProvider.useSystemFont) NativeFeatures.loadSystemFont();
 
       return MaterialApp(
-          title: 'Obtainium',
+          title: 'Discoverium',
           localizationsDelegates: context.localizationDelegates,
           supportedLocales: context.supportedLocales,
           locale: context.locale,
