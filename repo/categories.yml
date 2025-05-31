@@ -1,0 +1,69 @@
+- name: Productivity
+  description: Apps that help users be more efficient or organized.
+  short_name: productivity
+  examples: Google Keep, Microsoft Office, Todoist
+
+- name: Communication
+  description: Used for messaging, calling, and video conferencing.
+  short_name: communication
+  examples: WhatsApp, Telegram, Signal, Zoom
+
+- name: Social Networking
+  description: Apps for connecting and interacting with people.
+  short_name: social
+  examples: Facebook, Instagram, X (Twitter), Snapchat
+
+- name: Entertainment
+  description: Includes video streaming, music, and other content.
+  sort_name: entertainment
+  examples: Netflix, YouTube, Spotify, TikTok
+
+- name: Games
+  description: Subcategories include action, puzzle, strategy, simulation, etc.
+  short_name: games
+  examples: PUBG Mobile, Candy Crush, Clash of Clans
+
+- name: Education
+  description: Apps for learning new skills, school subjects, or languages.
+  short_name: education
+  examples: Duolingo, Khan Academy, Coursera
+
+- name: Lifestyle
+  description: Covers fitness, food, travel, hobbies, etc.
+  short_name: lifestyle
+  examples: MyFitnessPal, Airbnb, Tinder, Uber Eats
+
+- name: Finance
+  description: Apps for banking, investments, budgeting, and crypto.
+  short_name finance
+  examples: PayPal, Google Pay, Robinhood, Mint
+
+- name: Health & Fitness
+  description: Track workouts, health stats, or offer guidance.
+  short_name: fitness
+  examples: Fitbit, Samsung Health, Headspace
+
+- name: Shopping
+  description: Retail, deals, and online marketplaces.
+  short_name: shopping
+  examples: Amazon, eBay, Shein, Walmart
+
+- name: Travel & Local
+  description: For booking, maps, navigation, and exploring.
+  short_name: travel
+  examples: Google Maps, Booking.com, TripIt
+
+- name: News & Magazines
+  description: Deliver news, articles, and digital publications.
+  short_name: news
+  examples: BBC News, Flipboard, Feedly
+
+- name: Photography
+  description: Camera apps, photo editing, or gallery management.
+  short_name: photography
+  examples: Snapseed, VSCO, Adobe Lightroom
+
+- name: Tools & Utilities
+  description: System-level apps like file managers, cleaners, and VPNs.
+  short_name: tools
+  examples: CCleaner, ES File Explorer, NordVPN
