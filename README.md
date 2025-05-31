@@ -48,7 +48,7 @@ See [How it works](docs/HOWITWORKS.md).
 Discoverium is a fork of [Obtainium](https://github.com/ImranR98/Obtainium). [Obtainium](https://github.com/ImranR98/Obtainium) is great, but it is missing one feature. That feature is a search function for application discovery, like a repository or store. As far as can be told the lack of the feature is very intentional.
 
 ## Installation
-[<img src="https://github.com/machiav3lli/oandbackupx/blob/034b226cea5c1b30eb4f6a6f313e4dadcbb0ece4/badge_github.png"
+[<img src="./assets/badges/github_badge.png"
     alt="Get it on GitHub"
     height="80">](https://github.com/cygnusx-1-org/Discoverium/releases)
 
@@ -59,3 +59,8 @@ Discoverium is a fork of [Obtainium](https://github.com/ImranR98/Obtainium). [Ob
 | <img src="./assets/screenshots/apps.png" alt="Apps" /> | <img src="./assets/screenshots/add_app.png" alt="Add app" />           | <img src="./assets/screenshots/search_apps.png" alt="Search apps" />    |
 | ------------------------------------------------------ | ----------------------------------------------------------------------- | -------------------------------------------------------------------- |
 | <img src="./assets/screenshots/app.png" alt="App" />   | <img src="./assets/screenshots/import_export.png" alt="Import/Export" /> | <img src="./assets/screenshots/settings.png" alt="settings.png" /> |
+
+## Donations
+[<img src="./assets/badges/buymeacoffee_badge.png"
+    alt="Buy me a coffee"
+    height="80">](https://buymeacoffee.com/edgan)
