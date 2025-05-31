@@ -1,5 +1,20 @@
 # ![Discoverium Icon](./assets/graphics/icon_small.png) Discoverium
 
+<p align="center" style="margin-top: -2em;">
+  <a href="https://discord.gg/vDuSpJEDrW">
+    <picture>
+      <source height="24px" media="(prefers-color-scheme: dark)" srcset="/assets/icons/Discord.png" />
+      <img height="24px" src="/assets/icons/Discord.png" />
+    </picture>
+  </a>&nbsp;&nbsp;&nbsp;
+  <a href="https://old.reddit.com/r/discoverium/">
+    <picture>
+      <source height="24px" media="(prefers-color-scheme: dark)" srcset="/assets/icons/Reddit.png" />
+      <img height="24px" src="/assets/icons/Reddit.png" />
+    </picture>
+  </a>
+</p>
+
 Get Android app updates straight from the source, but with the added benefit of having a search function. This enables discovery new apps.
 
 Discoverium allows you to install and update apps directly from their releases pages, and receive notifications when new releases are made available.
