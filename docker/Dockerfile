@@ -6,6 +6,8 @@ ENV PATH "${PATH}:/opt/flutter/bin:/root/.pub-cache/bin:${ANDROID_SDK_ROOT}/cmdl
 
 ENV HOME=/root
 
+RUN cd /etc/apt ; sed -i 's/archive.ubuntu.com/mirrors.edge.kernel.org/g' sources.list ; sed -i 's/security.ubuntu.com/mirrors.edge.kernel.org/g' sources.list
+
 # Prereqs
 RUN \
     apt-get update &&\
@@ -23,6 +25,8 @@ RUN \
         libglu1-mesa-dev \
         git-lfs \
         openssl \
+        openssh-client \
+        rsync \
         wget
 
 # Build prereqs
@@ -56,7 +60,11 @@ RUN \
     sdkmanager --update
 
     # Platform tools
+RUN mkdir -p /opt/android-sdk-linux
 # Get latest with sdkmanager --list
+RUN useradd -ms /bin/bash ngrennan
+RUN chown ngrennan /opt/android-sdk-linux
+USER ngrennan
 RUN sdkmanager --install "build-tools;33.0.1"
 RUN sdkmanager --install "ndk;26.3.11579264"
 RUN sdkmanager --install "cmake;4.0.2"
@@ -69,6 +77,8 @@ RUN sdkmanager --install "platforms;android-32"
 RUN sdkmanager --install "platforms;android-33"
 RUN sdkmanager --install "platforms;android-34"
 RUN sdkmanager --install "platforms;android-35"
+
+USER root
 
 # Flutter
 ARG DEV_UID=0
@@ -83,4 +93,5 @@ RUN \
     chown -R ${DEV_UID} /opt/flutter
 RUN flutter --disable-analytics
 RUN flutter upgrade
-RUN chmod a+w /opt/flutter/packages -R
+RUN chmod -R a+w /opt/flutter/packages
+RUN chown -R ngrennan /opt/flutter/bin/cache

@@ -9,6 +9,8 @@ docker run \
     -ti \
     --net host \
     -v "${PWD}/../:${PWD}/../":z \
+    -v $HOME/.ssh:/$HOME/.ssh:ro \
+    -v $HOME/.keystore:/$HOME/.keystore:ro \
     -w "${PWD}" \
     --name flutter-dev-obtainium \
     --user $(id -u) \
