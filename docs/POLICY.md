@@ -29,7 +29,7 @@
 
     If donations or any exchange of money, in any form to the or related third-parties, affects the code, this is not allowed. An example, if it was a client to a service that requires you to pay for access, but that service is not the author or related third-party, that is OK. RooCode, an open source client for any of the AI model APIs is a great example.
 
-    Related third-parties mean a company, family member, etc that is assoicated with the author in such a way that the author might get indirect benefits or kickbacks from. Say the author's spouse or relative is runs the company or service that the software uses. Even if the party isn't directly related, if the company pays a kickback, finder fee, commission, or any form of exchange of money.
+    Related third-parties mean a company, family member, etc that is assoicated with the author in such a way that the author might get indirect benefits or kickbacks from. Say the author's spouse or relative that runs the company or service that the software uses. Even if the party isn't directly related, if the company pays a kickback, finder fee, commission, or any form of exchange of money.
 
 6. Malware-Free
     Apps must not contain malicious code, spyware, or abusive behavior (e.g., data harvesting, location tracking without consent).
