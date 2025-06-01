@@ -25,7 +25,11 @@ Projects without meaningful updates in that timeframe may be flagged as “archi
 5. No Ads or Monetization Tracking
 Apps must be free of advertisements. No trackers or analytics with the goal of monetization for the author or for a related third-party. Example, Giphy has an SDK with a tracker and analytics. It is not implemented in a way the author or anyone other than Giphy could use it for monetization purposes. Where as adding a tracker or analytics with the goal of collecting data about users for the purposes of making money off, by the author or related third-parties, that collection is not allowed.
 
-Donation or sponsorship links (e.g., GitHub Sponsors, Liberapay, Ko-fi, Buy me a Coffee, Pateron) are permitted if implemented in such a way as to not block the use of the app or any feature.
+Donation or sponsorship links (e.g., GitHub Sponsors, Liberapay, Ko-fi, Buy me a Coffee, Pateron) are permitted if implemented in such a way as to not block the use of the app or any feature. Meaning no feature locking behind a paywall. No commerical software.
+
+If donations or any exchange of money, in any form to the or related third-parties, affects the code, this is not allowed. An example, if it was a client to a service that requires you to pay for access, but that service is not the author or related third-party, that is OK. RooCode, an open source client for any of the AI model APIs is a great example.
+
+Related third-parties mean a company, family member, etc that is assoicated with the author in such a way that the author might get indirect benefits or kickbacks from. Say the author's spouse or relative is runs the company or service that the software uses. Even if the party isn't directly related, if the company pays a kickback, finder fee, commission, or any form of exchange of money.
 
 6. Malware-Free
 Apps must not contain malicious code, spyware, or abusive behavior (e.g., data harvesting, location tracking without consent).
