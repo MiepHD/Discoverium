@@ -8,7 +8,7 @@
 
 2. Functionality & Usefulness
 
-    The app should have a meaningful use case, not just a “Hello World.”
+    The app should have a meaningful use case, not just a “Hello World”.
 
     Basic level of usability—doesn’t have to be pretty, but shouldn’t be broken.
 
