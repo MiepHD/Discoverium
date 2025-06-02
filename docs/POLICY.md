@@ -22,7 +22,7 @@
 
 4. Actively Maintained
 
-    The app must show signs of active maintenance, such as commits, pull requests, or issue discussions within the last twelve months.
+    The app must show signs of active maintenance, such as commits, pull requests, or issue discussions within the last eighteen months.
 
     Projects without meaningful updates in that timeframe may be flagged as “archived” or removed.
 
