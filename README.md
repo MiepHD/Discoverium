@@ -53,8 +53,8 @@ Currently supported App sources:
 ## Finding App Configurations
 If you can't find the configuration for an app you want, feel free to create an [issue](https://github.com/cygnusx-1-org/Discoverium/issues).
 
-### Vetting
-I haven't created a policy or process yet.
+### Admission policy 
+See [here](/docs/POLICY.md).
 
 ## How it works
 See [How it works](docs/HOWITWORKS.md).
