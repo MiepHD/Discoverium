@@ -40,4 +40,4 @@
 
     Apps must not contain malicious code, spyware, or abusive behavior (e.g., data harvesting, location tracking without consent).
 
-    Code must not depend on obfuscated libraries that could introduce untrusted functionality. Proprietary libraries are allowed, as long as they would be usable by virtually anyone, and are things like SDKs used for accessing a certain API.
+    Code must not depend on obfuscated libraries that could introduce untrusted functionality. Proprietary libraries are allowed, as long as they would be usable by virtually anyone, and are things like SDKs used for accessing a certain API. The goal is to not block functionality, because of the goal of being "pure".
