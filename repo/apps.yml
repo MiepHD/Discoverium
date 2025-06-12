@@ -86,7 +86,7 @@
   authors: Jérémy Jamet, Brian Pellin
   category: security
   description: Lightweight vault and password manager for Android, KeePassDX allows editing encrypted data in a single file in KeePass format and fill in the forms in a secure way.
-  icon: https://raw.githubusercontent.com/Kunzisoft/KeePassDX/master/art/icon.png
+  icon: https://raw.githubusercontent.com/Kunzisoft/KeePassDX/refs/heads/master/app/src/libre/res/mipmap-xxxhdpi/ic_launcher_round.png
   releases:
     url: https://github.com/Kunzisoft/KeePassDX/releases
 - name: Koreader
@@ -107,28 +107,28 @@
   authors: Filippo Scognamiglio
   category: emulators
   description: All in one emulator on Android!
-  icon: https://raw.githubusercontent.com/Swordfish90/Lemuroid/refs/heads/master/lemuroid-app/src/main/res/mipmap-xxxhdpi/lemuroid_launcher.png
+  icon: https://raw.githubusercontent.com/Swordfish90/Lemuroid/refs/heads/master/lemuroid-app/src/main/res/mipmap-xxxhdpi/lemuroid_launcher_round.png
   releases:
     url: https://github.com/Swordfish90/Lemuroid/releases
 - name: LibreTube
   authors: Yannick Fehler
   category: entertainment
   description: An alternative frontend for YouTube, for Android.
-  icon: https://raw.githubusercontent.com/libre-tube/LibreTube/refs/heads/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png
+  icon: https://raw.githubusercontent.com/libre-tube/LibreTube/refs/heads/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png
   releases:
     url: https://github.com/libre-tube/LibreTube/releases
 - name: Lichess
   authors: Vincent Velociter
   category: games
   description: New Lichess mobile app in Flutter
-  icon: https://raw.githubusercontent.com/lichess-org/mobile/refs/heads/main/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp
+  icon: https://raw.githubusercontent.com/lichess-org/mobile/refs/heads/main/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp
   releases:
     url: https://github.com/lichess-org/mobile/releases
 - name: Localsend
   authors: Tien Do Nam
   category: tools
   description: An open-source cross-platform alternative to AirDrop
-  icon: https://raw.githubusercontent.com/localsend/localsend/refs/heads/main/app/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png
+  icon: https://raw.githubusercontent.com/localsend/localsend/refs/heads/main/app/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png
   releases:
     url: https://github.com/localsend/localsend/releases
 - name: Material Files
@@ -142,7 +142,7 @@
   authors: Mattermost
   category: communication
   description: Next generation iOS and Android apps for Mattermost in React Native
-  icon: https://raw.githubusercontent.com/mattermost/mattermost-mobile/refs/heads/main/assets/base/release/icons/android/mipmap-xxxhdpi/ic_launcher.png
+  icon: https://raw.githubusercontent.com/mattermost/mattermost-mobile/refs/heads/main/assets/base/release/icons/android/mipmap-xxxhdpi/ic_launcher_round.png
   releases:
     url: https://github.com/mattermost/mattermost-mobile/releases
 - name: mpv
