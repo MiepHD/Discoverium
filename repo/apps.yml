@@ -145,6 +145,13 @@
   icon: https://raw.githubusercontent.com/mattermost/mattermost-mobile/refs/heads/main/assets/base/release/icons/android/mipmap-xxxhdpi/ic_launcher_round.png
   releases:
     url: https://github.com/mattermost/mattermost-mobile/releases
+- name: Meshtastic
+  authors: Andre Kirchhoff, Kevin Hester
+  category: tools
+  description: Meshtastic is a tool for using Android with open-source mesh radios.
+  icon: https://raw.githubusercontent.com/meshtastic/Meshtastic-Android/refs/heads/main/app/src/main/res/mipmap-xxxhdpi/ic_launcher2_round.png
+  releases:
+    url: https://github.com/meshtastic/Meshtastic-Android/releases
 - name: mpv
   authors: Ilya Zhuravlev
   category: entertainment
