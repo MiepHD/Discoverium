@@ -9,7 +9,7 @@
   authors: Vishal Nehra, Emmanuel Mess
   category:  tools
   description: Material design file manager for Android
-  icon: https://raw.githubusercontent.com/TeamAmaze/AmazeFileManager/refs/heads/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png
+  icon: https://github.com/TeamAmaze/AmazeFileManager/blob/release/4.0/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png
   releases:
     url: https://github.com/TeamAmaze/AmazeFileManager/releases
 - name: Antenna Pod
@@ -23,7 +23,7 @@
   authors: Ben Hills, Erdem Yerebasmaz
   category: entertainment
   description: Simple, easy to use Podcast player app written in Flutter and Dart.
-  icon: https://raw.githubusercontent.com/amugofjava/anytime_podcast_player/refs/heads/master/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png
+  icon: https://raw.githubusercontent.com/amugofjava/anytime_podcast_player/refs/heads/master/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png
   releases:
     url: https://github.com/amugofjava/anytime_podcast_player/releases
 - name: Bitwarden
@@ -58,14 +58,14 @@
   authors: Benoit Marty, Francois Chasseur
   category: communication
   description: Android Matrix messenger application using the Matrix Rust Sdk and Jetpack Compose
-  icon: https://raw.githubusercontent.com/element-hq/element-x-android/refs/heads/develop/appicon/element/src/main/res/mipmap-xxxhdpi/ic_launcher.webp
+  icon: https://raw.githubusercontent.com/element-hq/element-x-android/refs/heads/develop/appicon/element/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp
   releases:
     url: https://github.com/element-hq/element-x-android/releases
 - name: Flashdim
   authors: Niko Diamadis
   category: tools
   description: Modern flashlight app with dim functionality on Android 13+
-  icon: https://raw.githubusercontent.com/cyb3rko/flashdim/refs/heads/main/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png
+  icon: https://raw.githubusercontent.com/cyb3rko/flashdim/refs/heads/main/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png
   releases:
     url: https://github.com/cyb3rko/flashdim/releases
 - name: Image Toolbox
