@@ -72,7 +72,7 @@
   authors: Malik Mukhametzyanov
   category:  tools
   description: Image Toolbox is a powerful app for advanced image manipulation. It offers dozens of features, from basic tools like crop and draw to filters, OCR, and a wide range of image processing options
-  icon: https://raw.githubusercontent.com/T8RIN/ImageToolbox/refs/heads/master/core/resources/src/main/res/mipmap-xxxhdpi/ic_launcher.webp
+  icon: https://raw.githubusercontent.com/T8RIN/ImageToolbox/refs/heads/master/core/resources/src/debug/res/mipmap-xxxhdpi/ic_launcher_round.webp
   releases:
     url: https://github.com/T8RIN/ImageToolbox/releases
 - name: Jerboa
@@ -240,13 +240,13 @@
   authors: VremSoft
   category: tools
   description: Android application to analyze WiFi signals.
-  icon: https://raw.githubusercontent.com/VREMSoftwareDevelopment/WiFiAnalyzer/refs/heads/main/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png
+  icon: https://raw.githubusercontent.com/VREMSoftwareDevelopment/WiFiAnalyzer/refs/heads/main/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png
   releases:
     url: https://github.com/VREMSoftwareDevelopment/WiFiAnalyzer/releases
 - name: Yubico Authenticator
   authors: Yubico
   category: security
   description: Yubico Authenticator for Desktop (Windows, macOS and Linux) and Android
-  icon: https://raw.githubusercontent.com/Yubico/yubioath-flutter/refs/heads/main/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png
+  icon: https://raw.githubusercontent.com/Yubico/yubioath-flutter/refs/heads/main/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png
   releases:
     url: https://github.com/Yubico/yubioath-flutter/releases
