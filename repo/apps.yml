@@ -9,7 +9,7 @@
   authors: Vishal Nehra, Emmanuel Mess
   category:  tools
   description: Material design file manager for Android
-  icon: https://github.com/TeamAmaze/AmazeFileManager/blob/release/4.0/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png
+  icon: https://raw.githubusercontent.com/TeamAmaze/AmazeFileManager/refs/heads/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png
   releases:
     url: https://github.com/TeamAmaze/AmazeFileManager/releases
 - name: Antenna Pod
