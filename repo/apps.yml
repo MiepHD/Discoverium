@@ -28,16 +28,6 @@
   verified: true
   releases:
     url: https://github.com/amugofjava/anytime_podcast_player/releases
-- name: Bitwarden
-  authors: Bitwarden
-  category: security
-  description: Bitwarden mobile apps (Password Manager and Authenticator) for Android.
-  icon: https://avatars.githubusercontent.com/u/15990069?s=200&v=4
-  id:  com.x8bit.bitwarden
-  type: curated
-  verified: true
-  releases:
-    url: https://github.com/bitwarden/android/releases
 - name: BinaryEye
   authors: Markus Fisch
   category: tools
@@ -48,6 +38,16 @@
   verified: true
   releases:
     url: https://github.com/markusfisch/BinaryEye/releases
+- name: Bitwarden
+  authors: Bitwarden
+  category: security
+  description: Bitwarden mobile apps (Password Manager and Authenticator) for Android.
+  icon: https://avatars.githubusercontent.com/u/15990069?s=200&v=4
+  id:  com.x8bit.bitwarden
+  type: curated
+  verified: true
+  releases:
+    url: https://github.com/bitwarden/android/releases
 - name: Continuum
   authors: Nathan Grennan
   category: social
@@ -298,16 +298,6 @@
   verified: true
   releases:
     url: https://github.com/sky-map-team/stardroid/releases
-- name: Termux
-  authors: Fredrik Fornwall, Leonid Pliushch
-  category: tools
-  description: A terminal emulator application for Android OS extendible by variety of packages.
-  icon: https://raw.githubusercontent.com/termux/termux-app/refs/heads/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png
-  id: com.termux
-  type: curated
-  verified: true
-  releases:
-    url: https://github.com/termux/termux-app/releases
 - name: Slide
   authors: Nathan Grennan
   category: social
@@ -318,6 +308,16 @@
   verified: true
   releases:
     url: https://github.com/cygnusx-1-org/Slide/releases
+- name: Termux
+  authors: Fredrik Fornwall, Leonid Pliushch
+  category: tools
+  description: A terminal emulator application for Android OS extendible by variety of packages.
+  icon: https://raw.githubusercontent.com/termux/termux-app/refs/heads/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png
+  id: com.termux
+  type: curated
+  verified: true
+  releases:
+    url: https://github.com/termux/termux-app/releases
 - name: WifiAnalyzer
   authors: VremSoft
   category: tools
