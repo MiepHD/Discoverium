@@ -495,4 +495,13 @@ class SettingsProvider with ChangeNotifier {
     prefs?.setBool('shizukuPretendToBeGooglePlay', val);
     notifyListeners();
   }
+
+  bool get allowUnverifiedApps {
+    return prefs?.getBool('allowUnverifiedApps') ?? false;
+  }
+
+  set allowUnverifiedApps(bool val) {
+    prefs?.setBool('allowUnverifiedApps', val);
+    notifyListeners();
+  }
 }

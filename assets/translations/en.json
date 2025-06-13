@@ -291,6 +291,7 @@
     "supportFixedAPKURL": "Support fixed APK URLs",
     "selectX": "Select {}",
     "parallelDownloads": "Allow parallel downloads",
+    "allowUnverifiedApps": "Allow unverified apps",
     "useShizuku": "Use Shizuku or Sui to install",
     "shizukuBinderNotFound": "Shizuku service not running",
     "shizukuOld": "Old Shizuku version (<11) - update it",

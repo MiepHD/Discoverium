@@ -21,6 +21,7 @@ class DiscoveriumApp {
   final String? icon;
   final String? releasesUrl;
   final List<String> categories;
+  final bool verified;
 
   DiscoveriumApp({
     required this.name,
@@ -30,6 +31,7 @@ class DiscoveriumApp {
     this.icon,
     this.releasesUrl,
     this.categories = const [],
+    this.verified = true,
   });
 
   factory DiscoveriumApp.fromYaml(Map<String, dynamic> yaml) {
@@ -55,6 +57,9 @@ class DiscoveriumApp {
       categories = [yaml['category'].toString()];
     }
 
+    // Parse verified field, default to true if not specified
+    bool verified = yaml['verified'] == true;
+
     return DiscoveriumApp(
       name: yaml['name']?.toString() ?? 'Unknown',
       description: yaml['description']?.toString() ?? 'No description',
@@ -63,6 +68,7 @@ class DiscoveriumApp {
       icon: yaml['icon']?.toString(),
       releasesUrl: releasesUrl,
       categories: categories,
+      verified: verified,
     );
   }
 
@@ -142,9 +148,11 @@ class SearchPageState extends State<SearchPage> {
 
       setState(() {
         _allApps = apps;
-        _filteredApps = apps;
         _isLoading = false;
       });
+
+      // Apply filtering after loading
+      _filterApps();
     } catch (e) {
       setState(() {
         _error = e.toString();
@@ -155,11 +163,16 @@ class SearchPageState extends State<SearchPage> {
 
   void _filterApps() {
     final query = _searchController.text;
+    final settingsProvider = context.read<SettingsProvider>();
+    final allowUnverified = settingsProvider.allowUnverifiedApps;
+
     setState(() {
       if (query.isEmpty) {
-        _filteredApps = _allApps;
+        _filteredApps = _allApps.where((app) => allowUnverified || app.verified).toList();
       } else {
-        _filteredApps = _allApps.where((app) => app.matchesSearch(query)).toList();
+        _filteredApps = _allApps
+            .where((app) => app.matchesSearch(query) && (allowUnverified || app.verified))
+            .toList();
       }
     });
   }
@@ -311,8 +324,18 @@ class SearchPageState extends State<SearchPage> {
     }
   }
 
-  @override
+    @override
   Widget build(BuildContext context) {
+    // Watch the settings provider to rebuild when allowUnverifiedApps changes
+    final settingsProvider = context.watch<SettingsProvider>();
+
+    // Re-filter apps when the setting changes
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (_allApps.isNotEmpty) {
+        _filterApps();
+      }
+    });
+
     return Scaffold(
       appBar: AppBar(
         title: Text(tr('searchApps')),

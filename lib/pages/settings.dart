@@ -854,6 +854,21 @@ class _SettingsPageState extends State<SettingsPage> {
                                     })
                               ],
                             ),
+                            height16,
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Flexible(
+                                    child: Text(tr('allowUnverifiedApps'))),
+                                Switch(
+                                    value:
+                                        settingsProvider.allowUnverifiedApps,
+                                    onChanged: (value) {
+                                      settingsProvider.allowUnverifiedApps =
+                                          value;
+                                    })
+                              ],
+                            ),
                             height32,
                             Text(
                               tr('categories'),
