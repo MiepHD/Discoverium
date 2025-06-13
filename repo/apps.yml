@@ -259,6 +259,15 @@
   verified: false
   releases:
     url: https://github.com/QuantumBadger/RedReader/releases
+- name: RetroArch
+  authors: Daniel De Matteis
+  category: emulators
+  description: Cross-platform, sophisticated frontend for the libretro API.
+  icon: https://raw.githubusercontent.com/libretro/RetroArch/refs/heads/master/pkg/android/phoenix-common/res/mipmap-xxxhdpi/ic_launcher.png
+  type: curated
+  verified: true
+  releases:
+    url: https://github.com/libretro/RetroArch/releases
 - name: Revanced Manager
   authors: Alberto Ponces, Pun Butrach
   category: tools
