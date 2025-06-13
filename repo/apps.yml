@@ -1,13 +1,3 @@
-- name: Antisplit-M
-  authors: Abdurazaaq Mohammed
-  category: tools
-  description: App to AntiSplit (merge) split APKs (APKS/XAPK/APKM) to regular .APK file on Android
-  icon: https://raw.githubusercontent.com/AbdurazaaqMohammed/AntiSplit-M/refs/heads/redesign/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp
-  id: com.abdurazaaqmohammed.AntiSplit
-  type: curated
-  verified: true
-  releases:
-    url: https://github.com/AbdurazaaqMohammed/AntiSplit-M/releases
 - name: Amaze File Manager
   authors: Vishal Nehra, Emmanuel Mess
   category:  tools
@@ -18,6 +8,16 @@
   verified: true
   releases:
     url: https://github.com/TeamAmaze/AmazeFileManager/releases
+- name: Antisplit-M
+  authors: Abdurazaaq Mohammed
+  category: tools
+  description: App to AntiSplit (merge) split APKs (APKS/XAPK/APKM) to regular .APK file on Android
+  icon: https://raw.githubusercontent.com/AbdurazaaqMohammed/AntiSplit-M/refs/heads/redesign/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp
+  id: com.abdurazaaqmohammed.AntiSplit
+  type: curated
+  verified: true
+  releases:
+    url: https://github.com/AbdurazaaqMohammed/AntiSplit-M/releases
 - name: Anytime Podcast Player
   authors: Ben Hills, Erdem Yerebasmaz
   category: entertainment
