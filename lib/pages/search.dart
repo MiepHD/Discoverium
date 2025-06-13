@@ -235,10 +235,15 @@ class SearchPageState extends State<SearchPage> {
       });
 
       // Get app info from the releases URL
+      final source = sourceProvider.getSource(releasesUrl);
+      final defaultSettings = source != null
+          ? getDefaultValuesFromFormItems(source.combinedAppSpecificSettingFormItems)
+          : <String, dynamic>{};
+
       final app = await sourceProvider.getApp(
-        sourceProvider.getSource(releasesUrl),
+        source,
         releasesUrl.trim(),
-        {},
+        defaultSettings,
         trackOnlyOverride: false,
         sourceIsOverriden: false,
         inferAppIdIfOptional: true,
