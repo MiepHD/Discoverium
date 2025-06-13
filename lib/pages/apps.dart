@@ -416,11 +416,13 @@ class AppsPageState extends State<AppsPage> {
           future: appsProvider.updateAppIcon(listedApps[appIndex].app.id),
           builder: (ctx, val) {
             return listedApps[appIndex].icon != null
-                ? Image.memory(
-                    listedApps[appIndex].icon!,
-                    gaplessPlayback: true,
-                    opacity: AlwaysStoppedAnimation(
-                        listedApps[appIndex].installedInfo == null ? 0.6 : 1),
+                ? Opacity(
+                    opacity: listedApps[appIndex].installedInfo == null ? 0.6 : 1,
+                    child: CircleAvatar(
+                      backgroundImage: MemoryImage(listedApps[appIndex].icon!),
+                      backgroundColor: Colors.transparent,
+                      child: Container(), // Empty container to show the background image
+                    ),
                   )
                 : Row(
                     mainAxisSize: MainAxisSize.min,

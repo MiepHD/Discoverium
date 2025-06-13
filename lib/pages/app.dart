@@ -307,10 +307,11 @@ class _AppPageState extends State<AppPage> {
                                 onTap: app == null
                                     ? null
                                     : () => pm.openApp(app.app.id),
-                                child: Image.memory(
-                                  app!.icon!,
-                                  height: small ? 70 : 150,
-                                  gaplessPlayback: true,
+                                child: CircleAvatar(
+                                  backgroundImage: MemoryImage(app!.icon!),
+                                  backgroundColor: Colors.transparent,
+                                  radius: small ? 35 : 75,
+                                  child: Container(), // Empty container to show the background image
                                 ),
                               )
                             ])
