@@ -1,14 +1,324 @@
+- name: Antisplit-M
+  authors: Abdurazaaq Mohammed
+  category: tools
+  description: App to AntiSplit (merge) split APKs (APKS/XAPK/APKM) to regular .APK file on Android
+  icon: https://raw.githubusercontent.com/AbdurazaaqMohammed/AntiSplit-M/refs/heads/redesign/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp
+  type: curated
+  verified: true
+  releases:
+    url: https://github.com/AbdurazaaqMohammed/AntiSplit-M/releases
+- name: Amaze File Manager
+  authors: Vishal Nehra, Emmanuel Mess
+  category:  tools
+  description: Material design file manager for Android
+  icon: https://raw.githubusercontent.com/TeamAmaze/AmazeFileManager/refs/heads/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png
+  type: curated
+  verified: true
+  releases:
+    url: https://github.com/TeamAmaze/AmazeFileManager/releases
+- name: Antenna Pod
+  authors: Hans-Peter, Daniel Oeh
+  category: entertainment
+  description: A podcast manager for Android
+  icon: https://raw.githubusercontent.com/AntennaPod/AntennaPod/refs/heads/develop/ui/common/src/main/res/mipmap-xxxhdpi/ic_launcher.png
+  type: curated
+  verified: true
+  releases:
+    url: https://github.com/AntennaPod/AntennaPod/releases
+- name: Anytime Podcast Player
+  authors: Ben Hills, Erdem Yerebasmaz
+  category: entertainment
+  description: Simple, easy to use Podcast player app written in Flutter and Dart.
+  icon: https://raw.githubusercontent.com/amugofjava/anytime_podcast_player/refs/heads/master/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png
+  type: curated
+  verified: true
+  releases:
+    url: https://github.com/amugofjava/anytime_podcast_player/releases
+- name: Bitwarden
+  authors: Bitwarden
+  category: security
+  description: Bitwarden mobile apps (Password Manager and Authenticator) for Android.
+  icon: https://avatars.githubusercontent.com/u/15990069?s=200&v=4
+  type: curated
+  verified: true
+  releases:
+    url: https://github.com/bitwarden/android/releases
+- name: BinaryEye
+  authors: Markus Fisch
+  category: tools
+  description: Yet another barcode scanner for Android
+  icon: https://raw.githubusercontent.com/markusfisch/BinaryEye/refs/heads/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png
+  type: curated
+  verified: true
+  releases:
+    url: https://github.com/markusfisch/BinaryEye/releases
 - name: Continuum
   authors: Nathan Grennan
   category: social
   description: A Reddit client on Android written in Java. It does not have any ads and it features a clean UI and smooth browsing experience.
   icon: https://raw.githubusercontent.com/cygnusx-1-org/continuum/refs/heads/master/assets/logo/space_alien.png
+  type: curated
+  verified: true
   releases:
     url: https://github.com/cygnusx-1-org/continuum/releases
+- name: Cromite
+  authors: Carmelo Messina
+  category: browsers
+  description: Cromite a Bromite fork with ad blocking and privacy enhancements; take back your browser!
+  icon: https://camo.githubusercontent.com/6b4ee03be91712db2d81b603a1bb83553e97b66fa49443bf27b641089ea51696/68747470733a2f2f7777772e63726f6d6974652e6f72672f6170705f69636f6e2e706e67
+  type: curated
+  verified: true
+  releases:
+    url: https://github.com/uazo/cromite/releases
+- name: Element
+  authors: Benoit Marty, Francois Chasseur
+  category: communication
+  description: Android Matrix messenger application using the Matrix Rust Sdk and Jetpack Compose
+  icon: https://raw.githubusercontent.com/element-hq/element-x-android/refs/heads/develop/appicon/element/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp
+  type: curated
+  verified: true
+  releases:
+    url: https://github.com/element-hq/element-x-android/releases
+- name: Flashdim
+  authors: Niko Diamadis
+  category: tools
+  description: Modern flashlight app with dim functionality on Android 13+
+  icon: https://raw.githubusercontent.com/cyb3rko/flashdim/refs/heads/main/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png
+  type: curated
+  verified: true
+  releases:
+    url: https://github.com/cyb3rko/flashdim/releases
+- name: Image Toolbox
+  authors: Malik Mukhametzyanov
+  category:  tools
+  description: Image Toolbox is a powerful app for advanced image manipulation. It offers dozens of features, from basic tools like crop and draw to filters, OCR, and a wide range of image processing options
+  icon: https://raw.githubusercontent.com/T8RIN/ImageToolbox/refs/heads/master/core/resources/src/debug/res/mipmap-xxxhdpi/ic_launcher_round.webp
+  type: curated
+  verified: true
+  releases:
+    url: https://github.com/T8RIN/ImageToolbox/releases
+- name: Jerboa
+  authors: Tyler Houlihan
+  category: social
+  description: Jerboa is a native-android client for Lemmy, built using the native Android Toolkit, Jetpack Compose.
+  icon: https://raw.githubusercontent.com/LemmyNet/jerboa/refs/heads/main/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp
+  type: curated
+  verified: true
+  releases:
+    url: https://github.com/LemmyNet/jerboa/releases
+- name: KeePassDX
+  authors: Jérémy Jamet, Brian Pellin
+  category: security
+  description: Lightweight vault and password manager for Android, KeePassDX allows editing encrypted data in a single file in KeePass format and fill in the forms in a secure way.
+  icon: https://raw.githubusercontent.com/Kunzisoft/KeePassDX/refs/heads/master/app/src/libre/res/mipmap-xxxhdpi/ic_launcher_round.png
+  type: curated
+  verified: true
+  releases:
+    url: https://github.com/Kunzisoft/KeePassDX/releases
+- name: Koreader
+  authors: QP Hou, Huang Xin, Frans de Jonge
+  category: readers
+  description: An ebook reader application supporting PDF, DjVu, EPUB, FB2 and many more formats, running on Cervantes, Kindle, Kobo, PocketBook and Android devices
+  icon: https://raw.githubusercontent.com/koreader/koreader/master/resources/koreader.png
+  type: curated
+  verified: true
+  releases:
+    url: https://github.com/koreader/koreader/releases
+- name: Lemuroid
+  authors: Filippo Scognamiglio
+  category: emulators
+  description: All in one emulator on Android!
+  icon: https://raw.githubusercontent.com/Swordfish90/Lemuroid/refs/heads/master/lemuroid-app/src/main/res/mipmap-xxxhdpi/lemuroid_launcher_round.png
+  type: curated
+  verified: true
+  releases:
+    url: https://github.com/Swordfish90/Lemuroid/releases
+- name: LibreTube
+  authors: Yannick Fehler
+  category: entertainment
+  description: An alternative frontend for YouTube, for Android.
+  icon: https://raw.githubusercontent.com/libre-tube/LibreTube/refs/heads/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png
+  type: curated
+  verified: true
+  releases:
+    url: https://github.com/libre-tube/LibreTube/releases
+- name: Lichess
+  authors: Vincent Velociter
+  category: games
+  description: New Lichess mobile app in Flutter
+  icon: https://raw.githubusercontent.com/lichess-org/mobile/refs/heads/main/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp
+  type: curated
+  verified: true
+  releases:
+    url: https://github.com/lichess-org/mobile/releases
+- name: Localsend
+  authors: Tien Do Nam
+  category: tools
+  description: An open-source cross-platform alternative to AirDrop
+  icon: https://raw.githubusercontent.com/localsend/localsend/refs/heads/main/app/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png
+  type: curated
+  verified: true
+  releases:
+    url: https://github.com/localsend/localsend/releases
+- name: Material Files
+  authors: Hai Zhang
+  category: tools
+  description: Material Design file manager for Android
+  icon: https://raw.githubusercontent.com/zhanghai/MaterialFiles/refs/heads/master/app/src/main/res/mipmap-xxxhdpi/launcher_icon.png
+  type: curated
+  verified: true
+  releases:
+    url: https://github.com/zhanghai/MaterialFiles/releases
+- name: Mattermost
+  authors: Mattermost
+  category: communication
+  description: Next generation iOS and Android apps for Mattermost in React Native
+  icon: https://raw.githubusercontent.com/mattermost/mattermost-mobile/refs/heads/main/assets/base/release/icons/android/mipmap-xxxhdpi/ic_launcher_round.png
+  type: curated
+  verified: true
+  releases:
+    url: https://github.com/mattermost/mattermost-mobile/releases
+- name: Meshtastic
+  authors: Andre Kirchhoff, Kevin Hester
+  category: tools
+  description: Meshtastic is a tool for using Android with open-source mesh radios.
+  icon: https://raw.githubusercontent.com/meshtastic/Meshtastic-Android/refs/heads/main/app/src/main/res/mipmap-xxxhdpi/ic_launcher2_round.png
+  type: curated
+  verified: true
+  releases:
+    url: https://github.com/meshtastic/Meshtastic-Android/releases
+- name: mpv
+  authors: Ilya Zhuravlev
+  category: entertainment
+  description: video player for Android based on libmpv
+  icon: https://raw.githubusercontent.com/mpv-android/mpv-android/refs/heads/master/app/src/main/res/mipmap-xxxhdpi/mpv_launcher_icon.png
+  type: curated
+  verified: true
+  releases:
+    url: https://github.com/mpv-android/mpv-android/releases
+- name: mpvKt
+  authors: Abdallah Mehiz
+  category: entertainment
+  description: A media player for android, based on mpv-android and built with Jetpack Compose.
+  icon: https://raw.githubusercontent.com/abdallahmehiz/mpvKt/refs/heads/main/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp
+  type: curated
+  verified: true
+  releases:
+    url: https://github.com/abdallahmehiz/mpvKt/releases
+- name: NewPipe
+  authors: Fabio Giovanazzi, Tobias Groza, Christian Schabesberger
+  category: entertainment
+  description: A libre lightweight streaming front-end for Android.
+  icon: https://raw.githubusercontent.com/TeamNewPipe/NewPipe/dev/assets/new_pipe_icon_5.png
+  type: curated
+  verified: true
+  releases:
+    url: https://github.com/teamnewpipe/newpipe/releases
+- name: Nextcloud
+  authors: Nextcloud
+  category: productivity
+  description: The Android client for Nextcloud. Easily work with your data on your Nextcloud.
+  icon: https://raw.githubusercontent.com/nextcloud/android/refs/heads/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png
+  type: curated
+  verified: true
+  releases:
+    url: https://github.com/nextcloud/android/releases
+- name: Olauncher
+  authors: Tanuj M.
+  category: launchers
+  description: Minimal AF Launcher for Android. Reduce your screen time. Daily wallpapers.
+  icon: http://raw.githubusercontent.com/tanujnotes/Olauncher/refs/heads/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp
+  type: curated
+  verified: true
+  releases:
+    url: https://github.com/tanujnotes/Olauncher/releases
+- name: OpenNote
+  authors: Yang Dai
+  category: productivity
+  description: Markdown Editor & Notebook for Android built with Jetpack Compose.
+  icon: https://raw.githubusercontent.com/YangDai2003/OpenNote-Compose/refs/heads/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp
+  type: curated
+  verified: true
+  releases:
+    url: https://github.com/YangDai2003/OpenNote-Compose/releases
+- name: Privacy friendly QR scanner
+  authors: Tobias Länge
+  category: tools
+  description: Privacy Friendly QR Code Scanner for Android
+  icon: https://raw.githubusercontent.com/SecUSo/privacy-friendly-qr-scanner/refs/heads/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png
+  type: curated
+  verified: true
+  releases:
+    url: https://github.com/SecUSo/privacy-friendly-qr-scanner/releases
+- name: RedReader
+  authors: QuantumBadger
+  category: social
+  description: An unofficial open source Android app for Reddit.
+  icon: https://raw.githubusercontent.com/QuantumBadger/RedReader/refs/heads/master/src/main/res/mipmap-xxxhdpi/icon.png
+  type: curated
+  verified: false
+  releases:
+    url: https://github.com/QuantumBadger/RedReader/releases
+- name: Revanced Manager
+  authors: Alberto Ponces, Pun Butrach
+  category: tools
+  description: Application to use ReVanced on Android
+  icon: https://raw.githubusercontent.com/ReVanced/revanced-manager/refs/heads/main/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png
+  type: curated
+  verified: true
+  releases:
+    url: https://github.com/ReVanced/revanced-manager/releases
+- name: Signal
+  authors: Signal
+  category: communication
+  description: A private messenger for Android.
+  icon: https://raw.githubusercontent.com/signalapp/Signal-Android/refs/heads/main/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png
+  type: curated
+  verified: true
+  releases:
+    url: https://github.com/signalapp/Signal-Android/releases
+- name: Sky Map
+  authors: John David Taylor
+  category: education
+  description: Sky Map (formerly Google Sky Map, open sourced in 2012)
+  icon: https://raw.githubusercontent.com/sky-map-team/stardroid/refs/heads/master/fastlane/metadata/android/en-US/images/icon.png
+  type: curated
+  verified: true
+  releases:
+    url: https://github.com/sky-map-team/stardroid/releases
+- name: Termux
+  authors: Fredrik Fornwall, Leonid Pliushch
+  category: tools
+  description: A terminal emulator application for Android OS extendible by variety of packages.
+  icon: https://raw.githubusercontent.com/termux/termux-app/refs/heads/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png
+  type: curated
+  verified: true
+  releases:
+    url: https://github.com/termux/termux-app/releases
 - name: Slide
   authors: Nathan Grennan
   category: social
   description: Slide is an open-source, ad-free Reddit browser for Android. It is based around the Java Reddit API Wrapper.
   icon: https://raw.githubusercontent.com/cygnusx-1-org/Slide/refs/heads/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png
+  type: curated
+  verified: true
   releases:
     url: https://github.com/cygnusx-1-org/Slide/releases
+- name: WifiAnalyzer
+  authors: VremSoft
+  category: tools
+  description: Android application to analyze WiFi signals.
+  icon: https://raw.githubusercontent.com/VREMSoftwareDevelopment/WiFiAnalyzer/refs/heads/main/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png
+  type: curated
+  verified: true
+  releases:
+    url: https://github.com/VREMSoftwareDevelopment/WiFiAnalyzer/releases
+- name: Yubico Authenticator
+  authors: Yubico
+  category: security
+  description: Yubico Authenticator for Desktop (Windows, macOS and Linux) and Android
+  icon: https://raw.githubusercontent.com/Yubico/yubioath-flutter/refs/heads/main/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png
+  type: curated
+  verified: true
+  releases:
+    url: https://github.com/Yubico/yubioath-flutter/releases
