@@ -1,6 +1,6 @@
 - name: Amaze File Manager
   authors: Vishal Nehra, Emmanuel Mess
-  category:  tools
+  category: tools
   description: Material design file manager for Android
   icon: https://raw.githubusercontent.com/TeamAmaze/AmazeFileManager/refs/heads/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png
   id: com.amaze.filemanager
@@ -43,7 +43,7 @@
   category: security
   description: Bitwarden mobile apps (Password Manager and Authenticator) for Android.
   icon: https://avatars.githubusercontent.com/u/15990069?s=200&v=4
-  id:  com.x8bit.bitwarden
+  id: com.x8bit.bitwarden
   type: curated
   verified: true
   releases:
@@ -90,7 +90,7 @@
     url: https://github.com/cyb3rko/flashdim/releases
 - name: Image Toolbox
   authors: Malik Mukhametzyanov
-  category:  tools
+  category: tools
   description: Image Toolbox is a powerful app for advanced image manipulation. It offers dozens of features, from basic tools like crop and draw to filters, OCR, and a wide range of image processing options
   icon: https://raw.githubusercontent.com/T8RIN/ImageToolbox/refs/heads/master/core/resources/src/debug/res/mipmap-xxxhdpi/ic_launcher_round.webp
   id: ru.tech.imageresizeshrinker
