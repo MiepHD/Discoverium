@@ -1463,9 +1463,31 @@ class AppsProvider with ChangeNotifier {
     if (apps[appId]?.icon == null) {
       var cachedIcon = File('${iconsCacheDir.path}/$appId.png');
       var alreadyCached = cachedIcon.existsSync() && !ignoreCache;
-      var icon = alreadyCached
-          ? (await cachedIcon.readAsBytes())
-          : (await apps[appId]?.installedInfo?.applicationInfo?.getAppIcon());
+
+      Uint8List? icon;
+
+      // Check if we have a Discoverium icon URL in additionalSettings
+      var discoveriumIconUrl = apps[appId]?.app.additionalSettings['discoveriumIconUrl'];
+
+      if (discoveriumIconUrl != null && !alreadyCached) {
+        try {
+          // Try to download the icon from Discoverium
+          final response = await get(Uri.parse(discoveriumIconUrl.toString()));
+          if (response.statusCode == 200) {
+            icon = response.bodyBytes;
+          }
+        } catch (e) {
+          // If download fails, continue to fallback methods
+        }
+      }
+
+      // Fallback to cached or installed app icon
+      if (icon == null) {
+        icon = alreadyCached
+            ? (await cachedIcon.readAsBytes())
+            : (await apps[appId]?.installedInfo?.applicationInfo?.getAppIcon());
+      }
+
       if (icon != null && !alreadyCached) {
         cachedIcon.writeAsBytes(icon.toList());
       }

@@ -181,8 +181,8 @@ class GitHub extends AppSource {
   }
 
   /// Helper method to check if the GitHub URL matches any app in Discoverium's repo/apps.yml
-  /// and return the corresponding app ID
-  Future<String?> _getAppIdFromDiscoveriumRepo(String standardUrl) async {
+  /// and return the corresponding app metadata
+  Future<Map<String, dynamic>?> _getAppMetadataFromDiscoveriumRepo(String standardUrl) async {
     try {
       // Get the branch setting from SettingsProvider
       SettingsProvider settingsProvider = SettingsProvider();
@@ -214,11 +214,13 @@ class GitHub extends AppSource {
               String normalizedReleasesUrl = _normalizeUrl(releasesUrl);
 
               if (normalizedStandardUrl == normalizedReleasesUrl) {
-                // Found a match, return the app ID if available
-                final appId = appData['id'];
-                if (appId != null && appId.toString().isNotEmpty) {
-                  return appId.toString();
-                }
+                // Found a match, return the app metadata
+                return {
+                  'id': appData['id']?.toString(),
+                  'name': appData['name']?.toString(),
+                  'author': appData['author']?.toString() ?? appData['authors']?.toString(),
+                  'icon': appData['icon']?.toString(),
+                };
               }
             }
           }
@@ -229,6 +231,13 @@ class GitHub extends AppSource {
     }
 
     return null;
+  }
+
+  /// Helper method to check if the GitHub URL matches any app in Discoverium's repo/apps.yml
+  /// and return the corresponding app ID
+  Future<String?> _getAppIdFromDiscoveriumRepo(String standardUrl) async {
+    final metadata = await _getAppMetadataFromDiscoveriumRepo(standardUrl);
+    return metadata?['id'];
   }
 
   /// Helper method to normalize URLs for comparison
@@ -551,14 +560,26 @@ class GitHub extends AppSource {
         throw NoVersionError();
       }
       var changeLog = (targetRelease['body'] ?? '').toString();
-      return APKDetails(
+
+      // Get Discoverium metadata for icon URL
+      final metadata = await _getAppMetadataFromDiscoveriumRepo(standardUrl);
+      var iconUrl = metadata?['icon'];
+
+      var apkDetails = APKDetails(
           version,
           targetRelease['apkUrls'] as List<MapEntry<String, String>>,
-          getAppNames(standardUrl),
+          await getAppNamesWithDiscoveriumMetadata(standardUrl),
           releaseDate: releaseDate,
           changeLog: changeLog.isEmpty ? null : changeLog,
           allAssetUrls:
               targetRelease['allAssetUrls'] as List<MapEntry<String, String>>);
+
+      // Store icon URL in additionalSettings for later use
+      if (iconUrl != null) {
+        additionalSettings['discoveriumIconUrl'] = iconUrl;
+      }
+
+      return apkDetails;
     } else {
       if (onHttpErrorCode != null) {
         onHttpErrorCode(res);
@@ -604,6 +625,20 @@ class GitHub extends AppSource {
     String temp = standardUrl.substring(standardUrl.indexOf('://') + 3);
     List<String> names = temp.substring(temp.indexOf('/') + 1).split('/');
     return AppNames(names[0], names.sublist(1).join('/'));
+  }
+
+  /// Get app names, checking Discoverium metadata first
+  Future<AppNames> getAppNamesWithDiscoveriumMetadata(String standardUrl) async {
+    final metadata = await _getAppMetadataFromDiscoveriumRepo(standardUrl);
+    if (metadata != null && metadata['name'] != null) {
+      // Use metadata from Discoverium
+      return AppNames(
+        metadata['author'] ?? getAppNames(standardUrl).author,
+        metadata['name']!
+      );
+    }
+    // Fall back to repository-based names
+    return getAppNames(standardUrl);
   }
 
   Future<Map<String, List<String>>> searchCommon(
@@ -656,5 +691,10 @@ class GitHub extends AppSource {
                   60000000)
               .round());
     }
+  }
+
+  @override
+  App endOfGetAppChanges(App app) {
+    return app;
   }
 }
