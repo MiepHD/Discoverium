@@ -11,6 +11,7 @@ import 'package:obtainium/providers/logs_provider.dart';
 import 'package:obtainium/providers/settings_provider.dart';
 import 'package:obtainium/providers/source_provider.dart';
 import 'package:url_launcher/url_launcher_string.dart';
+import 'package:yaml/yaml.dart';
 
 class GitHub extends AppSource {
   GitHub() {
@@ -119,6 +120,18 @@ class GitHub extends AppSource {
   @override
   Future<String?> tryInferringAppId(String standardUrl,
       {Map<String, dynamic> additionalSettings = const {}}) async {
+
+    // First, try to get the app ID from Discoverium's repo/apps.yml
+    try {
+      String? appIdFromRepo = await _getAppIdFromDiscoveriumRepo(standardUrl);
+      if (appIdFromRepo != null && appIdFromRepo.isNotEmpty) {
+        return appIdFromRepo;
+      }
+    } catch (e) {
+      // Continue with fallback methods
+    }
+
+    // Fallback to existing build.gradle parsing
     const possibleBuildGradleLocations = [
       '/app/build.gradle',
       'android/app/build.gradle',
@@ -165,6 +178,77 @@ class GitHub extends AppSource {
       }
     }
     return null;
+  }
+
+  /// Helper method to check if the GitHub URL matches any app in Discoverium's repo/apps.yml
+  /// and return the corresponding app ID
+  Future<String?> _getAppIdFromDiscoveriumRepo(String standardUrl) async {
+    try {
+      // Get the branch setting from SettingsProvider
+      SettingsProvider settingsProvider = SettingsProvider();
+      await settingsProvider.initializeSettings();
+      final branch = settingsProvider.discoveriumBranch;
+
+      // Fetch apps.yml from Discoverium repository
+      final appsResponse = await get(
+        Uri.parse('https://raw.githubusercontent.com/cygnusx-1-org/Discoverium/refs/heads/$branch/repo/apps.yml'),
+      );
+
+      if (appsResponse.statusCode != 200) {
+        return null;
+      }
+
+      // Parse YAML
+      final appsYaml = loadYaml(appsResponse.body);
+
+      if (appsYaml is List) {
+        for (final appData in appsYaml) {
+          if (appData is Map) {
+            // Check if this app has a matching releases URL
+            final releases = appData['releases'];
+            if (releases is Map && releases['url'] != null) {
+              String releasesUrl = releases['url'].toString();
+
+              // Normalize URLs for comparison (remove trailing slashes, etc.)
+              String normalizedStandardUrl = _normalizeUrl(standardUrl);
+              String normalizedReleasesUrl = _normalizeUrl(releasesUrl);
+
+              if (normalizedStandardUrl == normalizedReleasesUrl) {
+                // Found a match, return the app ID if available
+                final appId = appData['id'];
+                if (appId != null && appId.toString().isNotEmpty) {
+                  return appId.toString();
+                }
+              }
+            }
+          }
+        }
+      }
+    } catch (e) {
+      // Silently ignore errors and fall back to other methods
+    }
+
+    return null;
+  }
+
+  /// Helper method to normalize URLs for comparison
+  String _normalizeUrl(String url) {
+    // Remove trailing slashes and normalize GitHub URLs
+    String normalized = url.trim().toLowerCase();
+    if (normalized.endsWith('/')) {
+      normalized = normalized.substring(0, normalized.length - 1);
+    }
+
+    // Handle GitHub releases URLs specifically
+    if (normalized.contains('github.com') && normalized.contains('/releases')) {
+      // Extract the repo part: https://github.com/owner/repo/releases -> https://github.com/owner/repo
+      int releasesIndex = normalized.indexOf('/releases');
+      if (releasesIndex > 0) {
+        normalized = normalized.substring(0, releasesIndex);
+      }
+    }
+
+    return normalized;
   }
 
   @override
@@ -483,7 +567,7 @@ class GitHub extends AppSource {
     }
   }
 
-  getLatestAPKDetailsCommon2(
+  Future<APKDetails> getLatestAPKDetailsCommon2(
       String standardUrl,
       Map<String, dynamic> additionalSettings,
       Future<String> Function(bool) reqUrlGenerator,
@@ -565,7 +649,7 @@ class GitHub extends AppSource {
     }, querySettings: querySettings);
   }
 
-  rateLimitErrorCheck(Response res) {
+  void rateLimitErrorCheck(Response res) {
     if (res.headers['x-ratelimit-remaining'] == '0') {
       throw RateLimitError(
           (int.parse(res.headers['x-ratelimit-reset'] ?? '1800000000') /
