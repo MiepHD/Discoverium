@@ -620,6 +620,27 @@ class _SettingsPageState extends State<SettingsPage> {
                                   fontWeight: FontWeight.bold,
                                   color: Theme.of(context).colorScheme.primary),
                             ),
+                            height16,
+                            DropdownButtonFormField<String>(
+                                decoration:
+                                    InputDecoration(labelText: tr('discoveriumBranch')),
+                                value: settingsProvider.discoveriumBranch,
+                                items: const [
+                                  DropdownMenuItem(
+                                    value: 'main',
+                                    child: Text('main'),
+                                  ),
+                                  DropdownMenuItem(
+                                    value: 'test',
+                                    child: Text('test'),
+                                  ),
+                                ],
+                                onChanged: (value) {
+                                  if (value != null) {
+                                    settingsProvider.discoveriumBranch = value;
+                                  }
+                                }),
+                            height16,
                             ...sourceSpecificFields,
                             height32,
                             Text(

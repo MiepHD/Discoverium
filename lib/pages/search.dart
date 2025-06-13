@@ -118,9 +118,13 @@ class SearchPageState extends State<SearchPage> {
     });
 
     try {
+      // Get the branch setting from SettingsProvider
+      final settingsProvider = context.read<SettingsProvider>();
+      final branch = settingsProvider.discoveriumBranch;
+
       // Fetch apps.yml with the new simplified format
       final appsResponse = await http.get(
-        Uri.parse('https://raw.githubusercontent.com/cygnusx-1-org/Discoverium/refs/heads/main/repo/apps.yml'),
+        Uri.parse('https://raw.githubusercontent.com/cygnusx-1-org/Discoverium/refs/heads/$branch/repo/apps.yml'),
       );
 
       if (appsResponse.statusCode != 200) {

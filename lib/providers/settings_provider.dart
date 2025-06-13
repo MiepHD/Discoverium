@@ -504,4 +504,13 @@ class SettingsProvider with ChangeNotifier {
     prefs?.setBool('allowUnverifiedApps', val);
     notifyListeners();
   }
+
+  String get discoveriumBranch {
+    return prefs?.getString('discoveriumBranch') ?? 'main';
+  }
+
+  set discoveriumBranch(String val) {
+    prefs?.setString('discoveriumBranch', val);
+    notifyListeners();
+  }
 }
