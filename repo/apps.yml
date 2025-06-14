@@ -479,7 +479,7 @@
   icon: https://raw.githubusercontent.com/logseq/logseq/refs/heads/master/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png
   id: com.logseq.app
   type: curated
-  verified: yes
+  verified: true
   releases:
     url: https://github.com/logseq/logseq/releases
 - name: Magisk
@@ -567,7 +567,7 @@
   icon: https://raw.githubusercontent.com/mullvad/mullvadvpn-app/refs/heads/main/android/src/main/play/listings/en-US/graphics/icon/icon.png
   id: net.mullvad.mullvadvpn
   type: curated
-  verified: yes
+  verified: true
   releases:
     url: https://github.com/mullvad/mullvadvpn-app/releases
 - name: NewPipe
@@ -919,7 +919,7 @@
   icon: https://raw.githubusercontent.com/wireapp/wire-android/refs/heads/develop/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png
   id: com.wire
   type: curated
-  verified: yes
+  verified: true
   releases:
     url: https://github.com/wireapp/wire-android/releases
 - name: yetCalc
