@@ -13,6 +13,7 @@ import 'package:obtainium/pages/apps.dart';
 import 'package:obtainium/pages/import_export.dart';
 import 'package:obtainium/pages/search.dart';
 import 'package:obtainium/pages/settings.dart';
+import 'package:obtainium/pages/settings_main.dart';
 import 'package:obtainium/providers/apps_provider.dart';
 import 'package:obtainium/providers/settings_provider.dart';
 import 'package:obtainium/providers/source_provider.dart';
@@ -52,7 +53,7 @@ class _HomePageState extends State<HomePage> {
         SearchPage(key: GlobalKey<SearchPageState>())),
     NavigationPageItem(
         tr('importExport'), Icons.import_export, const ImportExportPage()),
-    NavigationPageItem(tr('settings'), Icons.settings, const SettingsPage())
+    NavigationPageItem(tr('settings'), Icons.settings, const SettingsMainPage())
   ];
 
   @override
