@@ -1,3 +1,8 @@
+- name: Browsers
+  description: Web browsers
+  short_name: browsers
+  examples: Brave, Cromite, Firefox, and Iceraven
+
 - name: Communication
   description: Used for messaging, calling, and video conferencing.
   short_name: communication
