@@ -177,19 +177,47 @@ class SearchPageState extends State<SearchPage> {
     final allowUnverified = settingsProvider.allowUnverifiedApps;
     final allowCommercial = settingsProvider.allowCommercialApps;
 
+    // Get existing apps to filter out already added apps
+    final appsProvider = context.read<AppsProvider>();
+    final existingApps = appsProvider.apps.values.map((appInfo) => appInfo.app).toList();
+
+    // Create sets for efficient lookup
+    final existingAppUrls = existingApps.map((app) => app.url.trim().toLowerCase()).toSet();
+    final existingAppNames = existingApps.map((app) => '${app.name.toLowerCase()}|${app.author.toLowerCase()}').toSet();
+
+    bool isAppAlreadyAdded(DiscoveriumApp app) {
+      // Check if the release URL matches any existing app URL
+      if (app.releasesUrl != null) {
+        final normalizedReleaseUrl = app.releasesUrl!.trim().toLowerCase();
+        if (existingAppUrls.contains(normalizedReleaseUrl)) {
+          return true;
+        }
+      }
+
+      // Also check by name + author combination as a fallback
+      final appNameAuthor = '${app.name.toLowerCase()}|${(app.author ?? '').toLowerCase()}';
+      if (existingAppNames.contains(appNameAuthor)) {
+        return true;
+      }
+
+      return false;
+    }
+
     setState(() {
       if (query.isEmpty) {
         _filteredApps = _allApps
             .where((app) =>
                 (allowUnverified || app.verified) &&
-                (allowCommercial || !app.commercial))
+                (allowCommercial || !app.commercial) &&
+                !isAppAlreadyAdded(app))
             .toList();
       } else {
         _filteredApps = _allApps
             .where((app) =>
                 app.matchesSearch(query) &&
                 (allowUnverified || app.verified) &&
-                (allowCommercial || !app.commercial))
+                (allowCommercial || !app.commercial) &&
+                !isAppAlreadyAdded(app))
             .toList();
       }
     });
@@ -346,8 +374,10 @@ class SearchPageState extends State<SearchPage> {
   Widget build(BuildContext context) {
     // Watch the settings provider to rebuild when allowUnverifiedApps changes
     final settingsProvider = context.watch<SettingsProvider>();
+    // Watch the apps provider to rebuild when apps are added/removed
+    final appsProvider = context.watch<AppsProvider>();
 
-    // Re-filter apps when the setting changes
+    // Re-filter apps when the settings or apps change
     WidgetsBinding.instance.addPostFrameCallback((_) {
       if (_allApps.isNotEmpty) {
         _filterApps();
