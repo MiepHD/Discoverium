@@ -40,7 +40,7 @@ class SettingsProvider with ChangeNotifier {
   }
 
   bool get useSystemFont {
-    return prefs?.getBool('useSystemFont') ?? false;
+    return prefs?.getBool('useSystemFont') ?? true;
   }
 
   set useSystemFont(bool useSystemFont) {
@@ -78,7 +78,7 @@ class SettingsProvider with ChangeNotifier {
   }
 
   bool get useMaterialYou {
-    return prefs?.getBool('useMaterialYou') ?? false;
+    return prefs?.getBool('useMaterialYou') ?? true;
   }
 
   set useMaterialYou(bool useMaterialYou) {
@@ -87,7 +87,7 @@ class SettingsProvider with ChangeNotifier {
   }
 
   bool get useBlackTheme {
-    return prefs?.getBool('useBlackTheme') ?? false;
+    return prefs?.getBool('useBlackTheme') ?? true;
   }
 
   set useBlackTheme(bool useBlackTheme) {
