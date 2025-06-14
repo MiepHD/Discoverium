@@ -95,7 +95,14 @@ class SearchPage extends StatefulWidget {
 }
 
 class SearchPageState extends State<SearchPage> {
+  // Static variables to preserve state across widget rebuilds
+  static String _persistentSearchQuery = '';
+  static List<DiscoveriumApp> _persistentAllApps = [];
+  static List<DiscoveriumApp> _persistentFilteredApps = [];
+  static bool _hasLoadedApps = false;
+
   final TextEditingController _searchController = TextEditingController();
+  final ScrollController _scrollController = ScrollController();
   List<DiscoveriumApp> _allApps = [];
   List<DiscoveriumApp> _filteredApps = [];
   bool _isLoading = false;
@@ -105,14 +112,29 @@ class SearchPageState extends State<SearchPage> {
   @override
   void initState() {
     super.initState();
+
+    // Restore persistent state
+    _searchController.text = _persistentSearchQuery;
+    _allApps = List.from(_persistentAllApps);
+    _filteredApps = List.from(_persistentFilteredApps);
+
     _searchController.addListener(_filterApps);
-    // Auto-load apps when the page initializes
-    _loadApps();
+
+    // Auto-load apps only if not already loaded
+    if (!_hasLoadedApps) {
+      _loadApps();
+    }
   }
 
   @override
   void dispose() {
+    // Save persistent state
+    _persistentSearchQuery = _searchController.text;
+    _persistentAllApps = List.from(_allApps);
+    _persistentFilteredApps = List.from(_filteredApps);
+
     _searchController.dispose();
+    _scrollController.dispose();
     super.dispose();
   }
 
@@ -160,6 +182,9 @@ class SearchPageState extends State<SearchPage> {
         _allApps = apps;
         _isLoading = false;
       });
+
+      // Mark apps as loaded
+      _hasLoadedApps = true;
 
       // Apply filtering after loading
       _filterApps();
@@ -288,10 +313,23 @@ class SearchPageState extends State<SearchPage> {
       final notificationsProvider = context.read<NotificationsProvider>();
       final sourceProvider = SourceProvider();
 
-      // Show loading state
-      setState(() {
-        _isLoading = true;
-      });
+      // Show loading snackbar instead of changing main loading state
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Row(
+            children: [
+              const SizedBox(
+                width: 16,
+                height: 16,
+                child: CircularProgressIndicator(strokeWidth: 2),
+              ),
+              const SizedBox(width: 16),
+              Text(tr('addApp')),
+            ],
+          ),
+          duration: const Duration(seconds: 30), // Long duration, will be dismissed manually
+        ),
+      );
 
       // Get app info from the releases URL
       final source = sourceProvider.getSource(releasesUrl);
@@ -346,6 +384,9 @@ class SearchPageState extends State<SearchPage> {
       // Save the app
       await appsProvider.saveApps([app], onlyIfExists: false);
 
+      // Dismiss the loading snackbar
+      ScaffoldMessenger.of(context).hideCurrentSnackBar();
+
       // Show success message and navigate to app page
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
@@ -362,11 +403,9 @@ class SearchPageState extends State<SearchPage> {
         ),
       );
     } catch (e) {
+      // Hide loading snackbar and show error
+      ScaffoldMessenger.of(context).hideCurrentSnackBar();
       showError(e, context);
-    } finally {
-      setState(() {
-        _isLoading = false;
-      });
     }
   }
 
@@ -505,6 +544,8 @@ class SearchPageState extends State<SearchPage> {
                                 ),
                               )
                             : ListView.builder(
+                                key: const PageStorageKey<String>('searchList'),
+                                controller: _scrollController,
                                 itemCount: _filteredApps.length,
                                 itemBuilder: (context, index) {
                                   final app = _filteredApps[index];
