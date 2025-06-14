@@ -75,19 +75,9 @@
 - name: BinaryEye
   authors: Markus Fisch
   category: tools
-  description: Yet another barcode scanner for Android
-  icon: https://raw.githubusercontent.com/markusfisch/BinaryEye/refs/heads/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png
-  id: de.markusfisch.android.binaryeye
-  type: curated
-  verified: true
-  releases:
-    url: https://github.com/markusfisch/BinaryEye/releases
-- name: BinaryEye
-  authors: Markus Fisch
-  category: tools
   commerical: false
   description: Yet another barcode scanner for Android
-  icon: https://raw.githubusercontent.com/markusfisch/BinaryEye/refs/heads/master/app/src/debug/res/mipmap-xxxhdpi/ic_launcher.png
+  icon: https://raw.githubusercontent.com/markusfisch/BinaryEye/refs/heads/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png
   id: de.markusfisch.android.binaryeye
   type: curated
   verified: true
