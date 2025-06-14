@@ -30,7 +30,7 @@
 
     Apps must be free of advertisements. No trackers or analytics with the goal of monetization for the author or for a related third-party. Example, [Giphy](https://giphy.com/) has an [SDK](https://developers.giphy.com/docs/sdk/) with a tracker and analytics. It is not implemented in a way the author or anyone other than [Giphy](https://giphy.com/) could use it for monetization purposes. Where as adding a tracker or analytics with the goal of collecting data about users for the purposes of making money off, by the author or related third-parties, that collection is not allowed.
 
-    Donation or sponsorship links (e.g., GitHub Sponsors, Liberapay, Ko-fi, Buy me a Coffee, Pateron) are permitted if implemented in such a way as to not block the use of the app or any feature. Meaning no feature locking behind a paywall. No commerical software.
+    Donation or sponsorship links (e.g., GitHub Sponsors, Liberapay, Ko-fi, Buy me a Coffee, Pateron) are permitted if implemented in such a way as to not block the use of the app or any feature. Meaning no feature locking behind a paywall.
 
     If donations or any exchange of money, in any form to the author or related third-parties, affects the code, this is not allowed. An example, if it was a client to a service that requires you to pay for access, but that service is not the author or related third-party, that is OK. [Roo Code](https://github.com/RooCodeInc/Roo-Code), an open source client for any of the AI model APIs is a great example.
 
