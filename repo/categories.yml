@@ -33,6 +33,11 @@
   short_name: fitness
   examples: Fitbit, Samsung Health, Headspace
 
+- name: Launchers
+  description: App launchers
+  short_name: launchers
+  examples: Nova Launcher, mLauncher, Olauncher
+
 - name: Lifestyle
   description: Covers food, dating, hobbies, etc.
   short_name: lifestyle
