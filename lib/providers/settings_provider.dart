@@ -505,6 +505,15 @@ class SettingsProvider with ChangeNotifier {
     notifyListeners();
   }
 
+  bool get allowCommercialApps {
+    return prefs?.getBool('allowCommercialApps') ?? false;
+  }
+
+  set allowCommercialApps(bool val) {
+    prefs?.setBool('allowCommercialApps', val);
+    notifyListeners();
+  }
+
   String get discoveriumBranch {
     return prefs?.getString('discoveriumBranch') ?? 'main';
   }

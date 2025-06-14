@@ -22,6 +22,7 @@ class DiscoveriumApp {
   final String? releasesUrl;
   final List<String> categories;
   final bool verified;
+  final bool commercial;
 
   DiscoveriumApp({
     required this.name,
@@ -32,6 +33,7 @@ class DiscoveriumApp {
     this.releasesUrl,
     this.categories = const [],
     this.verified = true,
+    this.commercial = false,
   });
 
   factory DiscoveriumApp.fromYaml(Map<String, dynamic> yaml) {
@@ -60,6 +62,9 @@ class DiscoveriumApp {
     // Parse verified field, default to true if not specified
     bool verified = yaml['verified'] == true;
 
+    // Parse commercial field, default to false if not specified
+    bool commercial = yaml['commercial'] == true; // Note: keeping the typo from YAML
+
     return DiscoveriumApp(
       name: yaml['name']?.toString() ?? 'Unknown',
       description: yaml['description']?.toString() ?? 'No description',
@@ -69,6 +74,7 @@ class DiscoveriumApp {
       releasesUrl: releasesUrl,
       categories: categories,
       verified: verified,
+      commercial: commercial,
     );
   }
 
@@ -169,13 +175,21 @@ class SearchPageState extends State<SearchPage> {
     final query = _searchController.text;
     final settingsProvider = context.read<SettingsProvider>();
     final allowUnverified = settingsProvider.allowUnverifiedApps;
+    final allowCommercial = settingsProvider.allowCommercialApps;
 
     setState(() {
       if (query.isEmpty) {
-        _filteredApps = _allApps.where((app) => allowUnverified || app.verified).toList();
+        _filteredApps = _allApps
+            .where((app) =>
+                (allowUnverified || app.verified) &&
+                (allowCommercial || !app.commercial))
+            .toList();
       } else {
         _filteredApps = _allApps
-            .where((app) => app.matchesSearch(query) && (allowUnverified || app.verified))
+            .where((app) =>
+                app.matchesSearch(query) &&
+                (allowUnverified || app.verified) &&
+                (allowCommercial || !app.commercial))
             .toList();
       }
     });

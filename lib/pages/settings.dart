@@ -890,6 +890,21 @@ class _SettingsPageState extends State<SettingsPage> {
                                     })
                               ],
                             ),
+                            height16,
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Flexible(
+                                    child: Text('Allow commercial apps')),
+                                Switch(
+                                    value:
+                                        settingsProvider.allowCommercialApps,
+                                    onChanged: (value) {
+                                      settingsProvider.allowCommercialApps =
+                                          value;
+                                    })
+                              ],
+                            ),
                             height32,
                             Text(
                               tr('categories'),
