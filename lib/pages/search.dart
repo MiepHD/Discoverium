@@ -515,20 +515,48 @@ class SearchPageState extends State<SearchPage> {
                                               ),
                                             ),
                                           ],
-                                          if (app.categories.isNotEmpty) ...[
+                                          if (app.categories.isNotEmpty || app.commercial || !app.verified) ...[
                                             const SizedBox(height: 4),
                                             Wrap(
                                               spacing: 4,
-                                              children: app.categories.map((category) =>
-                                                Chip(
-                                                  label: Text(
-                                                    category,
-                                                    style: const TextStyle(fontSize: 10),
+                                              runSpacing: 4,
+                                              children: [
+                                                ...app.categories.map((category) => Chip(
+                                                      label: Text(
+                                                        category,
+                                                        style: const TextStyle(fontSize: 10),
+                                                      ),
+                                                      materialTapTargetSize:
+                                                          MaterialTapTargetSize.shrinkWrap,
+                                                      visualDensity: VisualDensity.compact,
+                                                    )),
+                                                if (app.commercial)
+                                                  Chip(
+                                                    label: Text(
+                                                      'Commercial',
+                                                      style: const TextStyle(
+                                                          fontSize: 10, color: Colors.white),
+                                                    ),
+                                                    backgroundColor:
+                                                        const Color(0xFF4B0000), // Darker red
+                                                    materialTapTargetSize:
+                                                        MaterialTapTargetSize.shrinkWrap,
+                                                    visualDensity: VisualDensity.compact,
                                                   ),
-                                                  materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                                                  visualDensity: VisualDensity.compact,
-                                                ),
-                                              ).toList(),
+                                                if (!app.verified)
+                                                  Chip(
+                                                    label: Text(
+                                                      'Unverified',
+                                                      style: const TextStyle(
+                                                          fontSize: 10, color: Colors.white),
+                                                    ),
+                                                    backgroundColor:
+                                                        const Color(0xFF4B0000), // Darker red
+                                                    materialTapTargetSize:
+                                                        MaterialTapTargetSize.shrinkWrap,
+                                                    visualDensity: VisualDensity.compact,
+                                                  ),
+                                              ],
                                             ),
                                           ],
                                         ],
