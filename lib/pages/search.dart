@@ -24,6 +24,7 @@ class DiscoveriumApp {
   final List<String> categories;
   final bool verified;
   final bool commercial;
+  final String? releaseTitleFilterRegex;
 
   DiscoveriumApp({
     required this.name,
@@ -35,6 +36,7 @@ class DiscoveriumApp {
     this.categories = const [],
     this.verified = true,
     this.commercial = false,
+    this.releaseTitleFilterRegex,
   });
 
   factory DiscoveriumApp.fromYaml(Map<String, dynamic> yaml) {
@@ -66,6 +68,16 @@ class DiscoveriumApp {
     // Parse commercial field, default to false if not specified
     bool commercial = yaml['commercial'] == true; // Note: keeping the typo from YAML
 
+    // Parse filters.release.title for release title regex filter
+    String? releaseTitleFilterRegex;
+    if (yaml['filters'] is Map) {
+      final filters = yaml['filters'] as Map;
+      final release = filters['release'];
+      if (release is Map && release['title'] != null) {
+        releaseTitleFilterRegex = release['title'].toString();
+      }
+    }
+
     return DiscoveriumApp(
       name: yaml['name']?.toString() ?? 'Unknown',
       description: yaml['description']?.toString() ?? 'No description',
@@ -76,6 +88,7 @@ class DiscoveriumApp {
       categories: categories,
       verified: verified,
       commercial: commercial,
+      releaseTitleFilterRegex: releaseTitleFilterRegex,
     );
   }
 
@@ -302,12 +315,13 @@ class SearchPageState extends State<SearchPage> {
     );
 
     if (result == true) {
-      await _addAppToMainList(app.releasesUrl!);
+      await _addAppToMainList(app);
     }
   }
 
-  Future<void> _addAppToMainList(String releasesUrl) async {
+  Future<void> _addAppToMainList(DiscoveriumApp discoveriumApp) async {
     try {
+      final releasesUrl = discoveriumApp.releasesUrl!;
       // Get providers
       final appsProvider = context.read<AppsProvider>();
       final settingsProvider = context.read<SettingsProvider>();
@@ -337,6 +351,13 @@ class SearchPageState extends State<SearchPage> {
       final defaultSettings = source != null
           ? getDefaultValuesFromFormItems(source.combinedAppSpecificSettingFormItems)
           : <String, dynamic>{};
+
+      // Apply release title filter if provided in repo metadata
+      if (discoveriumApp.releaseTitleFilterRegex != null &&
+          discoveriumApp.releaseTitleFilterRegex!.isNotEmpty) {
+        defaultSettings['filterReleaseTitlesByRegEx'] =
+            discoveriumApp.releaseTitleFilterRegex;
+      }
 
       final app = await sourceProvider.getApp(
         source,
