@@ -25,10 +25,8 @@ class AddAppPage extends StatefulWidget {
 
 class AddAppPageState extends State<AddAppPage> {
   bool gettingAppInfo = false;
-  bool searching = false;
 
   String userInput = '';
-  String searchQuery = '';
   String? pickedSourceOverride;
   String? previousPickedSourceOverride;
   AppSource? pickedSource;
@@ -97,7 +95,7 @@ class AddAppPageState extends State<AddAppPage> {
     NotificationsProvider notificationsProvider =
         context.read<NotificationsProvider>();
 
-    bool doingSomething = gettingAppInfo || searching;
+    bool doingSomething = gettingAppInfo;
 
     Future<bool> getTrackOnlyConfirmationIfNeeded(bool userPickedTrackOnly,
         {bool ignoreHideSetting = false}) async {
@@ -263,137 +261,7 @@ class AddAppPageState extends State<AddAppPage> {
           ],
         );
 
-    runSearch({bool filtered = true}) async {
-      setState(() {
-        searching = true;
-      });
-      var sourceStrings = <String, List<String>>{};
-      sourceProvider.sources.where((e) => e.canSearch).forEach((s) {
-        sourceStrings[s.name] = [s.name];
-      });
-      try {
-        var searchSources = await showDialog<List<String>?>(
-                context: context,
-                builder: (BuildContext ctx) {
-                  return SelectionModal(
-                    title: tr('selectX', args: [plural('source', 2)]),
-                    entries: sourceStrings,
-                    selectedByDefault: true,
-                    onlyOneSelectionAllowed: false,
-                    titlesAreLinks: false,
-                    deselectThese: settingsProvider.searchDeselected,
-                  );
-                }) ??
-            [];
-        if (searchSources.isNotEmpty) {
-          settingsProvider.searchDeselected = sourceStrings.keys
-              .where((s) => !searchSources.contains(s))
-              .toList();
-          List<MapEntry<String, Map<String, List<String>>>?> results =
-              (await Future.wait(sourceProvider.sources
-                      .where((e) => searchSources.contains(e.name))
-                      .map((e) async {
-            try {
-              Map<String, dynamic>? querySettings = {};
-              if (e.includeAdditionalOptsInMainSearch) {
-                querySettings = await showDialog<Map<String, dynamic>?>(
-                    context: context,
-                    builder: (BuildContext ctx) {
-                      return GeneratedFormModal(
-                        title: tr('searchX', args: [e.name]),
-                        items: [
-                          ...e.searchQuerySettingFormItems.map((e) => [e]),
-                          [
-                            GeneratedFormTextField('url',
-                                label: e.hosts.isNotEmpty
-                                    ? tr('overrideSource')
-                                    : plural('url', 1).substring(2),
-                                autoCompleteOptions: [
-                                  ...(e.hosts.isNotEmpty ? [e.hosts[0]] : []),
-                                  ...appsProvider.apps.values
-                                      .where((a) =>
-                                          sourceProvider
-                                              .getSource(a.app.url,
-                                                  overrideSource:
-                                                      a.app.overrideSource)
-                                              .runtimeType ==
-                                          e.runtimeType)
-                                      .map((a) {
-                                    var uri = Uri.parse(a.app.url);
-                                    return '${uri.origin}${uri.path}';
-                                  })
-                                ],
-                                defaultValue:
-                                    e.hosts.isNotEmpty ? e.hosts[0] : '',
-                                required: true)
-                          ],
-                        ],
-                      );
-                    });
-                if (querySettings == null) {
-                  return null;
-                }
-              }
-              return MapEntry(e.runtimeType.toString(),
-                  await e.search(searchQuery, querySettings: querySettings));
-            } catch (err) {
-              if (err is! CredsNeededError) {
-                rethrow;
-              } else {
-                err.unexpected = true;
-                showError(err, context);
-                return null;
-              }
-            }
-          })))
-                  .where((a) => a != null)
-                  .toList();
 
-          // Interleave results instead of simple reduce
-          Map<String, MapEntry<String, List<String>>> res = {};
-          var si = 0;
-          var done = false;
-          while (!done) {
-            done = true;
-            for (var r in results) {
-              var sourceName = r!.key;
-              if (r.value.length > si) {
-                done = false;
-                var singleRes = r.value.entries.elementAt(si);
-                res[singleRes.key] = MapEntry(sourceName, singleRes.value);
-              }
-            }
-            si++;
-          }
-          if (res.isEmpty) {
-            throw ObtainiumError(tr('noResults'));
-          }
-          List<String>? selectedUrls = res.isEmpty
-              ? []
-              // ignore: use_build_context_synchronously
-              : await showDialog<List<String>?>(
-                  context: context,
-                  builder: (BuildContext ctx) {
-                    return SelectionModal(
-                      entries: res.map((k, v) => MapEntry(k, v.value)),
-                      selectedByDefault: false,
-                      onlyOneSelectionAllowed: true,
-                    );
-                  });
-          if (selectedUrls != null && selectedUrls.isNotEmpty) {
-            var sourceName = res[selectedUrls[0]]?.key;
-            changeUserInput(selectedUrls[0], true, false,
-                updateUrlInput: true, overrideSource: sourceName);
-          }
-        }
-      } catch (e) {
-        showError(e, context);
-      } finally {
-        setState(() {
-          searching = false;
-        });
-      }
-    }
 
     Widget getHTMLSourceOverrideDropdown() => Column(children: [
           Row(
@@ -444,43 +312,7 @@ class AddAppPageState extends State<AddAppPage> {
           )
         ]);
 
-    bool shouldShowSearchBar() =>
-        sourceProvider.sources.where((e) => e.canSearch).isNotEmpty &&
-        pickedSource == null &&
-        userInput.isEmpty;
 
-    Widget getSearchBarRow() => Row(
-          children: [
-            Expanded(
-              child: GeneratedForm(
-                  items: [
-                    [
-                      GeneratedFormTextField('searchSomeSources',
-                          label: tr('searchSomeSourcesLabel'), required: false),
-                    ]
-                  ],
-                  onValueChanges: (values, valid, isBuilding) {
-                    if (values.isNotEmpty && valid && !isBuilding) {
-                      setState(() {
-                        searchQuery = values['searchSomeSources']!.trim();
-                      });
-                    }
-                  }),
-            ),
-            const SizedBox(
-              width: 16,
-            ),
-            searching
-                ? const CircularProgressIndicator()
-                : ElevatedButton(
-                    onPressed: searchQuery.isEmpty || doingSomething
-                        ? null
-                        : () {
-                            runSearch();
-                          },
-                    child: Text(tr('search')))
-          ],
-        );
 
     Widget getAdditionalOptsCol() => Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -664,7 +496,6 @@ class AddAppPageState extends State<AddAppPage> {
                         height: 16,
                       ),
                       if (pickedSource != null) getHTMLSourceOverrideDropdown(),
-                      if (shouldShowSearchBar()) getSearchBarRow(),
                       if (pickedSource != null)
                         FutureBuilder(
                             builder: (ctx, val) {

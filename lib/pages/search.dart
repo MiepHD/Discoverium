@@ -10,6 +10,7 @@ import 'package:obtainium/providers/notifications_provider.dart';
 import 'package:obtainium/main.dart';
 import 'package:obtainium/custom_errors.dart';
 import 'package:obtainium/pages/app.dart';
+import 'package:obtainium/pages/advanced_search.dart';
 import 'package:obtainium/components/generated_form.dart';
 import 'package:provider/provider.dart';
 
@@ -427,6 +428,17 @@ class SearchPageState extends State<SearchPage> {
       appBar: AppBar(
         title: Text(tr('searchApps')),
         elevation: 0,
+        actions: [
+          TextButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const AdvancedSearchPage()),
+              );
+            },
+            child: const Text('Advanced Search'),
+          ),
+        ],
       ),
       body: Column(
         children: [
