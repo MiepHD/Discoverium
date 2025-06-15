@@ -461,9 +461,15 @@ class _AppPageState extends State<AppPage> {
       }
     }
 
-    getInstallOrUpdateButton() => TextButton(
-        style: TextButton.styleFrom(
+    getInstallOrUpdateButton() => ElevatedButton(
+        style: ElevatedButton.styleFrom(
             textStyle: Theme.of(context).textTheme.labelLarge,
+            padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+            backgroundColor: Theme.of(context).colorScheme.primary,
+            foregroundColor: Theme.of(context).colorScheme.onPrimary,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(25), // Creates the oval shape
+            ),
         ),
         onPressed: !updating &&
                 (app?.app.installedVersion == null ||
