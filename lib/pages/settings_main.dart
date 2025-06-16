@@ -4,6 +4,12 @@ import 'package:obtainium/pages/settings_updates.dart';
 import 'package:obtainium/pages/settings_source.dart';
 import 'package:obtainium/pages/settings_appearance.dart';
 import 'package:obtainium/pages/settings_categories.dart';
+import 'package:obtainium/providers/settings_provider.dart';
+import 'package:obtainium/providers/logs_provider.dart';
+import 'package:obtainium/custom_errors.dart';
+import 'package:obtainium/components/logs_dialog.dart';
+import 'package:provider/provider.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 class SettingsMainPage extends StatelessWidget {
   const SettingsMainPage({super.key});
@@ -47,6 +53,42 @@ class SettingsMainPage extends StatelessWidget {
             trailing: const Icon(Icons.chevron_right),
             onTap: () => _open(context, const CategoriesSettingsPage()),
           ),
+          const Divider(height: 32),
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 16),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                IconButton(
+                  onPressed: () {
+                    final settingsProvider = context.read<SettingsProvider>();
+                    launchUrlString(settingsProvider.sourceUrl,
+                        mode: LaunchMode.externalApplication);
+                  },
+                  icon: const Icon(Icons.code),
+                  tooltip: tr('appSource'),
+                ),
+                IconButton(
+                  onPressed: () {
+                    context.read<LogsProvider>().get().then((logs) {
+                      if (logs.isEmpty) {
+                        showMessage(ObtainiumError(tr('noLogs')), context);
+                      } else {
+                        showDialog(
+                          context: context,
+                          builder: (BuildContext ctx) {
+                            return const LogsDialog();
+                          });
+                      }
+                    });
+                  },
+                  icon: const Icon(Icons.bug_report_outlined),
+                  tooltip: tr('appLogs'),
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(height: 16),
         ],
       ),
     );

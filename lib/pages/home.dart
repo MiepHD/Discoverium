@@ -12,7 +12,6 @@ import 'package:obtainium/pages/add_app.dart';
 import 'package:obtainium/pages/apps.dart';
 import 'package:obtainium/pages/import_export.dart';
 import 'package:obtainium/pages/search.dart';
-import 'package:obtainium/pages/settings.dart';
 import 'package:obtainium/pages/settings_main.dart';
 import 'package:obtainium/providers/apps_provider.dart';
 import 'package:obtainium/providers/settings_provider.dart';

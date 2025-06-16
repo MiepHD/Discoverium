@@ -8,7 +8,7 @@ import 'package:obtainium/custom_errors.dart';
 import 'package:obtainium/main.dart';
 import 'package:obtainium/pages/app.dart';
 import 'package:obtainium/pages/import_export.dart';
-import 'package:obtainium/pages/settings.dart';
+import 'package:obtainium/components/category_editor_selector.dart';
 import 'package:obtainium/providers/apps_provider.dart';
 import 'package:obtainium/providers/notifications_provider.dart';
 import 'package:obtainium/providers/settings_provider.dart';

@@ -1,6 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:obtainium/pages/settings.dart' show CategoryEditorSelector;
+import 'package:obtainium/components/category_editor_selector.dart';
 
 class CategoriesSettingsPage extends StatelessWidget {
   const CategoriesSettingsPage({super.key});

@@ -30,7 +30,7 @@ class SettingsProvider with ChangeNotifier {
   String? defaultAppDir;
   bool justStarted = true;
 
-  String sourceUrl = 'https://github.com/ImranR98/Obtainium';
+  String sourceUrl = 'https://github.com/cygnusx-1-org/Discoverium';
 
   // Not done in constructor as we want to be able to await it
   Future<void> initializeSettings() async {

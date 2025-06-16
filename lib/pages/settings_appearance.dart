@@ -339,6 +339,7 @@ class _AppearanceSettingsPageState extends State<AppearanceSettingsPage> {
                   onChanged: (v) => settingsProvider.allowCommercialApps = v),
             ],
           ),
+          const SizedBox(height: 64), // Padding equal to one element height
         ],
       ),
     );
