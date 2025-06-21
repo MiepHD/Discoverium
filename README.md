@@ -20,7 +20,6 @@ Get Android app updates straight from the source, but with the added benefit of 
 Discoverium allows you to install and update apps directly from their releases pages, and receive notifications when new releases are made available.
 
 More info:
-- [AppVerifier](https://github.com/soupslurpr/AppVerifier) - App verification tool (recommended, integrates with Discoverium)
 - [Side Of Burritos - You should use this instead of F-Droid | How to use app RSS feed](https://youtu.be/FFz57zNR_M0) - Original motivation for this app
 - [Source code](https://github.com/cygnusx-1-org/Discoverium)
 
