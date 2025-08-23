@@ -155,6 +155,17 @@
   verified: true
   releases:
     url: https://github.com/uazo/cromite/releases
+- name: Cuscon
+  authors: Yazazuyo
+  category: tools
+  commercial: false
+  description: This icon pack adds variety and dynamism to your Home screen
+  icon: https://raw.githubusercontent.com/MiepHD/cuscon/refs/heads/master/app/src/main/res/drawable-nodpi/cuscon.webp
+  id: com.froxot.cuscon.foss
+  type: curated
+  verified: true
+  releases:
+    url: https://github.com/MiepHD/cuscon/releases
 - name: EinkBro
   authors: Daniel Kao
   category: browsers
