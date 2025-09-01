@@ -133,6 +133,15 @@
   verified: true
   releases:
     url: https://github.com/davidtakac/Bura/releases
+- name: CloudStream
+  authors: recloudstream
+  category: entertainment
+  commercial: false
+  description: Android app for streaming and downloading media.
+  icon: https://raw.githubusercontent.com/recloudstream/cloudstream/refs/heads/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png
+  id: com.lagradost.cloudstream3
+  releases:
+    url: https://github.com/recloudstream/cloudstream/releases
 - name: Continuum
   authors: Nathan Grennan
   category: social
