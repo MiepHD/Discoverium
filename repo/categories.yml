@@ -20,7 +20,7 @@
 
 - name: Finance
   description: Apps for banking, investments, budgeting, and crypto.
-  short_name finance
+  short_name: finance
   examples: PayPal, Google Pay, Robinhood, Mint
 
 - name: Games
