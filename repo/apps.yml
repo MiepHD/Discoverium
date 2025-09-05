@@ -133,6 +133,16 @@
   verified: true
   releases:
     url: https://github.com/davidtakac/Bura/releases
+- name: Cardabase
+  authors: Juraj Ondovčík
+  category: shopping
+  commercial: false
+  description: Cardabase is your digital wallet for loyalty cards. Save all your shop cards in one secure place and access them instantly.
+  icon: https://raw.githubusercontent.com/GeorgeYT9769/cardabase-app/refs/heads/main/assets/icons/ic_launcher.png
+  id: com.georgeyt9769.cardabase
+  type: curated
+  releases:
+    url: https://github.com/GeorgeYT9769/cardabase-app/releases
 - name: Continuum
   authors: Nathan Grennan
   category: social
