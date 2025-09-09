@@ -207,6 +207,17 @@
   verified: true
   releases:
     url: https://github.com/element-hq/element-x-android/releases
+- name: FairEmail
+  authors: M66B
+  category: communication
+  commercial: true
+  description: Fully featured, open source, privacy friendly email app for Android
+  icon: https://raw.githubusercontent.com/M66B/FairEmail/refs/heads/master/app/src/main/res/drawable-xxxhdpi/ic_shortcut_email.png
+  id: eu.faircode.email
+  type: submitted
+  verified: true
+  releases:
+    url: https://github.com/M66B/FairEmail/releases
 - name: Flashdim
   authors: Niko Diamadis
   category: tools
@@ -372,6 +383,17 @@
   verified: true
   releases:
     url: https://github.com/T8RIN/ImageToolbox/releases
+- name: IronFox
+  authors: IronFox OSS
+  category: browsers
+  commercial: false
+  description: The private, secure, user first web browser for Android.
+  icon: https://gitlab.com/ironfox-oss/IronFox/-/raw/dev/assets/ironfox.png
+  id: org.ironfoxoss.ironfox
+  type: submitted
+  verified: true
+  releases:
+    url: https://gitlab.com/ironfox-oss/IronFox/-/releases
 - name: Jerboa
   authors: Tyler Houlihan
   category: social
@@ -405,6 +427,17 @@
   verified: false
   releases:
     url: https://github.com/Predidit/Kazumi/releases
+- name: KeePass2Android
+  authors: PhilippC
+  category: security
+  commercial: false
+  description: Password manager for Android that allows editing encrypted data in a single file in KeePass format and fill in the forms in a secure way.
+  icon: https://raw.githubusercontent.com/PhilippC/keepass2android/refs/heads/master/src/keepass2android-app/Resources/mipmap-xxxhdpi/ic_launcher_online.png
+  id: keepass2android.keepass2android
+  type: submitted
+  verified: true
+  releases:
+    url: https://github.com/PhilippC/keepass2android/releases
 - name: KeePassDX
   authors: Jérémy Jamet, Brian Pellin
   category: security
@@ -680,6 +713,17 @@
   verified: true
   releases:
     url: https://github.com/OpenTracksApp/OpenTracks/releases
+- name: Organic Maps
+  authors: Organic Maps Open-Source Community
+  category: travel
+  commercial: false
+  description: Organic Maps is a free offline maps app for travelers, tourists, hikers, and cyclists. It uses crowd-sourced OpenStreetMap data and is developed with love by the community. No ads, no tracking, no data collection, no crapware.
+  icon: https://raw.githubusercontent.com/organicmaps/organicmaps/refs/heads/master/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png
+  id: app.organicmaps
+  type: submitted
+  verified: true
+  releases:
+    url: https://github.com/organicmaps/organicmaps/releases
 - name: PlainApp
   authors: iSmartCoding
   category: tool
@@ -768,6 +812,17 @@
   verified: true
   releases:
     url: https://github.com/shub39/Rush/releases
+- name: SAI
+  authors: Aefyr
+  category: tools
+  commercial: false
+  description: SAI (Split APKs Installer) is an Android app that lets you install split APKs (such as ones distributed as Android App Bundle). It has both rooted and rootless installation methods.
+  icon: https://raw.githubusercontent.com/Aefyr/SAI/refs/heads/master/app/src/main/res/drawable-xxxhdpi/logo.png
+  id: com.aefyr.sai
+  type: submitted
+  verified: true
+  releases:
+    url: https://github.com/Aefyr/SAI/releases
 - name: SetEdit
   authors: Muntashir Al-Islam
   category: tools
@@ -845,6 +900,17 @@
   verified: false
   releases:
     url: https://github.com/axel-cu/SmartDock/releases
+- name: SMS Ping
+  authors: ITDS Consulting, s.r.o.
+  category: tools
+  commercial: false
+  description: Silent Ping SMS for Android (does not require rooted device)
+  icon: https://raw.githubusercontent.com/itds-consulting/android-silent-ping-sms/refs/heads/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png
+  id: com.itds.sms.ping
+  type: submitted
+  verified: false
+  releases:
+    url: https://github.com/itds-consulting/android-silent-ping-sms/releases
 - name: Suntimes
   authors: Forrest Guice
   category: tools
