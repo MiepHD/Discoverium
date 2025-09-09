@@ -9,6 +9,17 @@
   verified: true
   releases:
     url: https://github.com/butzist/ActivityLauncher/releases
+- name: Adguard
+  authors: Adguard Software Ltd.
+  category: tools
+  commercial: true
+  description: AdGuard for Android is a perfect solution for Android devices. Unlike most other ad blockers, AdGuard doesn't require root access and provides a wide range of app management options.
+  icon: https://st.adguardcdn.com/favicons/adguard/favicon.svg
+  id: com.adguard.android
+  type: submitted
+  verified: true
+  releases:
+    url: https://download.adguardcdn.com/d/18673/adguard.apk
 - name: Aegis Authenticator
   authors: Alexander Bakker, Michael Schättgen
   category: security
@@ -31,6 +42,17 @@
   verified: true
   releases:
     url: https://github.com/TeamAmaze/AmazeFileManager/releases
+- name: Aliucord Manager
+  authors: Aliucord
+  category: communication
+  commercial: false
+  description: The new way to install Aliucord – a mod for the Android Discord app - in a user-friendly way
+  icon: https://raw.githubusercontent.com/Aliucord/Manager/refs/tags/v1.0.3/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png
+  id: com.aliucord.manager
+  type: submitted
+  verified: true
+  releases:
+    url: https://github.com/Aliucord/Aliucord/releases
 - name: ANeko
   authors: Nguyễn Quang Minh
   category: games
@@ -42,6 +64,17 @@
   verified: true
   releases:
     url: https://github.com/NQM-Gaming/Aneko/releases
+- name: Antimine
+  authors: Lucas Lima
+  category: games
+  commercial: false
+  description: Antimine is a minesweeper-like puzzle game. The objective is to flag the spaces with mines to make the field a safer place without exploding any of them.
+  icon: https://raw.githubusercontent.com/lucasnlm/antimine-android/refs/heads/main/common/src/main/res/mipmap-xxxhdpi/ic_launcher.png
+  id: dev.lucanlm.antimine
+  type: submitted
+  verified: true
+  releases:
+    url: https://f-droid.org/packages/dev.lucanlm.antimine/
 - name: Antisplit-M
   authors: Abdurazaaq Mohammed
   category: tools
@@ -86,6 +119,17 @@
   verified: true
   releases:
     url: https://github.com/markusfisch/BinaryEye
+- name: Birday
+  authors: minar
+  category: productivity
+  commercial: false
+  description: A beautiful Kotlin app to remember birthdays and events without having to open Facebook, set alarms or rely on Google Calendar
+  icon: https://raw.githubusercontent.com/m-i-n-a-r/birday/refs/heads/master/app/src/main/ic_launcher-playstore.png
+  id: com.minar.birday
+  type: submitted
+  verified: true
+  releases:
+    url: https://github.com/m-i-n-a-r/birday/releases
 - name: Bitwarden
   authors: Bitwarden
   category: security
@@ -122,6 +166,17 @@
   verified: true
   releases:
     url: https://github.com/mardous/BoomingMusic/releases
+- name: Brave - Beta
+  authors: Brave
+  category: browers
+  commercial: true
+  description: The browser that puts you first. Block ads. Save data. And get way faster webpages.
+  icon: https://raw.githubusercontent.com/brave/brave-core/refs/heads/master/app/theme/brave/product_logo_128_beta.png
+  id: com.brave.browser_beta
+  type: submitted
+  verified: true
+  releases:
+    url: https://github.com/brave/brave-browser/releases
 - name: Bura
   authors: David Takač
   category: tools
@@ -133,6 +188,17 @@
   verified: true
   releases:
     url: https://github.com/davidtakac/Bura/releases
+- name: ByCS Messenger
+  authors: Manage Now GmbH on behalf of the Bavarian State Government
+  category: communication
+  commercial: false
+  description: The Messenger service guarantees fast and secure communication in a school context.
+  icon: https://assets.messenger.bycs.de/icons/bycs-messenger-icon.svg
+  id: de.bayern.stmuk.messenger.android
+  type: submitted
+  verified: true
+  releases:
+    url: https://download.messenger.bycs.de/clients/bycs-messenger-latest-android.apk
 - name: Cardabase
   authors: Juraj Ondovčík
   category: shopping
@@ -438,6 +504,17 @@
   verified: true
   releases:
     url: https://github.com/PhilippC/keepass2android/releases
+- name: KeePassDroid
+  authors: bpellin
+  category: security
+  commercial: false
+  description: KeePass implementation for android (read-only)
+  icon: https://raw.githubusercontent.com/bpellin/keepassdroid/refs/heads/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png
+  id: com.android.keepass
+  type: submitted
+  verified: true
+  releases:
+    url: https://github.com/bpellin/keepassdroid/releases
 - name: KeePassDX
   authors: Jérémy Jamet, Brian Pellin
   category: security
@@ -889,6 +966,17 @@
   verified: true
   releases:
     url: https://github.com/Aefyr/SAI/releases
+- name: Session
+  authors: Session Technology Foundation
+  category: communication
+  commercial: false
+  description: Session - A Decentralized, Onion Routed, Private Messenger
+  icon: https://raw.githubusercontent.com/session-foundation/session-android/refs/heads/master/app/src/main/ic_launcher-playstore.png
+  id: network.loki.messenger
+  type: submitted
+  verified: true
+  releases:
+    url: https://github.com/session-foundation/session-android/releases
 - name: SetEdit
   authors: Muntashir Al-Islam
   category: tools
@@ -944,6 +1032,17 @@
   verified: true
   releases:
     url: https://github.com/cygnusx-1-org/Slide/releases
+- name: SmartTube
+  authors: Yuriy L
+  category: entertainment
+  commercial: false
+  description: Browse media content with your own rules on Android TV
+  icon: https://raw.githubusercontent.com/yuliskov/SmartTube/refs/heads/master/smarttubetv/src/main/res/mipmap-nodpi/app_icon.png
+  id: com.teamsmart.videomanager.tv
+  type: submitted
+  verified: false
+  releases:
+    url: https://github.com/yuliskov/SmartTube/releases
 - name: Smart AutoClicker
   authors: Kevin Buzeau
   category: tools
