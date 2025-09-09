@@ -581,6 +581,28 @@
   verified: true
   releases:
     url: https://github.com/meshtastic/Meshtastic-Android/releases
+- name: MicroG for ReVanced Apps
+  authors: oSumAtrIX
+  category: tools
+  commercial: false
+  description: MicroG is an open-source alternative to Google Play Services, enabling apps designed for Google services to run on platforms where these services are unavailable.
+  icon: https://static-revanced-net.pages.dev/assets/img/apps/thumbs/app.revanced.android.gms.200.webp
+  id: app.revanced.android.gms
+  type: submitted
+  verified: false
+  releases:
+    url: https://vanced.to/gmscore-microg
+- name: MicroG
+  authors: MicroG
+  category: tools
+  commercial: false
+  description: microG Services is a FLOSS (Free/Libre Open Source Software) framework to allow applications designed for Google Play Services to run on systems, where Play Services is not available.
+  icon: https://raw.githubusercontent.com/microg/GmsCore/refs/heads/master/vending-app/src/main/res/mipmap-xxxhdpi/ic_app.png
+  id: com.google.android.gms
+  type: submitted
+  verified: true
+  releases:
+    url: https://github.com/microg/GmsCore/releases
 - name: MinCal Widget
   authors: Miquel Martí
   category: productivity
@@ -790,6 +812,28 @@
   verified: true
   releases:
     url: https://github.com/ReVanced/revanced-manager/releases
+- name: ReVanced Manager
+  authors: revanced.net
+  category: tools
+  commercial: false
+  description: ReVanced Manager (RV Manager) is an all-in-one solution for downloading, installing, and managing ReVanced apps and other modded APKs, offering a safe, reliable, and user-friendly experience.
+  icon: https://static-revanced-net.pages.dev/assets/img/apps/thumbs/com.revanced.net.revancedmanager.200.webp
+  id: com.revanced.net.revancedmanager
+  type: submitted
+  verified: false
+  releases:
+    url: https://vanced.to/revanced-manager
+- name: ReVanced Youtube Music
+  authors: ReVanced Team
+  category: entertainment
+  commercial: false
+  description: ReVanced YouTube Music is a modified version of the official YouTube Music app, offering premium features like ad-free listening, background playback, and higher audio quality for free.
+  icon: https://static-revanced-net.pages.dev/assets/img/apps/thumbs/app.revanced.android.apps.youtube.music.200.webp
+  id: app.revanced.android.apps.youtube.music
+  type: submitted
+  verified: false
+  releases:
+    url: https://vanced.to/revanced-youtube-music
 - name: Ricochlime
   authors: Adil Hanney
   category: games
@@ -812,6 +856,28 @@
   verified: true
   releases:
     url: https://github.com/shub39/Rush/releases
+- name: RVX YT Extended
+  authors: inotia00
+  category: entertainment
+  commercial: false
+  description: ReVanced YouTube Extended (RVX YT) is a modification of the official YouTube app, offering enhanced features and extensive customization options.
+  icon: https://static-revanced-net.pages.dev/assets/img/apps/thumbs/app.rvx.android.youtube.200.webp
+  id: app.rvx.android.youtube
+  type: submitted
+  verified: false
+  releases:
+    url: https://vanced.to/revanced-youtube-extended
+- name: RVX YT Music Extended
+  authors: inotia00
+  category: entertainment
+  commercial: false
+  description: ReVanced YouTube Music Extended (RVX YT Music) is a highly customizable modification of YouTube Music, offering premium features and extensive customization options for free.
+  icon: https://static-revanced-net.pages.dev/assets/img/apps/thumbs/app.rvx.android.apps.youtube.music.200.webp
+  id: app.rvx.android.apps.youtube.music
+  type: submitted
+  verified: false
+  releases:
+    url: https://vanced.to/revanced-youtube-music-extended
 - name: SAI
   authors: Aefyr
   category: tools
@@ -1032,6 +1098,17 @@
   verified: false
   releases:
     url: https://github.com/Yet-Zio/yetCalc/releases
+- name: Youtube ReVanced
+  authors: ReVanced Team
+  category: entertainment
+  commercial: false
+  description: YouTube ReVanced is a free modification of the official YouTube app, offering ad-free viewing and numerous additional features.
+  icon: https://static-revanced-net.pages.dev/assets/img/apps/thumbs/app.revanced.android.youtube.200.webp
+  id: app.revanced.android.youtube
+  type: submitted
+  verified: false
+  releases:
+    url: https://vanced.to/youtube-revanced
 - name: Yubico Authenticator
   authors: Yubico
   category: security
