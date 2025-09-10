@@ -53,6 +53,17 @@
   verified: true
   releases:
     url: https://github.com/NQM-Gaming/Aneko/releases
+- name: Antimine
+  authors: Lucas Lima
+  category: games
+  commercial: false
+  description: Antimine is a minesweeper-like puzzle game. The objective is to flag the spaces with mines to make the field a safer place without exploding any of them.
+  icon: https://raw.githubusercontent.com/lucasnlm/antimine-android/refs/heads/main/common/src/main/res/mipmap-xxxhdpi/ic_launcher.png
+  id: dev.lucanlm.antimine
+  type: submitted
+  verified: true
+  releases:
+    url: https://f-droid.org/packages/dev.lucanlm.antimine/
 - name: Antisplit-M
   authors: Abdurazaaq Mohammed
   category: tools
@@ -144,17 +155,6 @@
   verified: true
   releases:
     url: https://github.com/mardous/BoomingMusic/releases
-- name: Brave - Beta
-  authors: Brave
-  category: browers
-  commercial: true
-  description: The browser that puts you first. Block ads. Save data. And get way faster webpages.
-  icon: https://raw.githubusercontent.com/brave/brave-core/refs/heads/master/app/theme/brave/product_logo_128_beta.png
-  id: com.brave.browser_beta
-  type: curated
-  verified: true
-  releases:
-    url: https://github.com/brave/brave-browser/releases
 - name: Bura
   authors: David Takač
   category: tools
@@ -240,17 +240,6 @@
   verified: true
   releases:
     url: https://github.com/element-hq/element-x-android/releases
-- name: FairEmail
-  authors: M66B
-  category: communication
-  commercial: true
-  description: Fully featured, open source, privacy friendly email app for Android
-  icon: https://raw.githubusercontent.com/M66B/FairEmail/refs/heads/master/app/src/main/res/drawable-xxxhdpi/ic_shortcut_email.png
-  id: eu.faircode.email
-  type: curated
-  verified: true
-  releases:
-    url: https://github.com/M66B/FairEmail/releases
 - name: Flashdim
   authors: Niko Diamadis
   category: tools
@@ -416,6 +405,17 @@
   verified: true
   releases:
     url: https://github.com/T8RIN/ImageToolbox/releases
+- name: IronFox
+  authors: IronFox OSS
+  category: browsers
+  commercial: false
+  description: The private, secure, user first web browser for Android.
+  icon: https://gitlab.com/ironfox-oss/IronFox/-/raw/dev/assets/ironfox.png
+  id: org.ironfoxoss.ironfox
+  type: submitted
+  verified: true
+  releases:
+    url: https://gitlab.com/ironfox-oss/IronFox/-/releases
 - name: Jerboa
   authors: Tyler Houlihan
   category: social
@@ -427,6 +427,17 @@
   verified: true
   releases:
     url: https://github.com/LemmyNet/jerboa/releases
+- name: Joplin
+  authors: Laurent Cozic
+  category: productivity
+  commercial: false
+  description: Joplin - the privacy-focused note taking app with sync capabilities for Windows, macOS, Linux, Android and iOS.
+  icon: https://raw.githubusercontent.com/laurent22/joplin/refs/heads/dev/packages/app-mobile/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png
+  id: net.cozic.joplin
+  type: curated
+  verified: true
+  releases:
+    url: https://github.com/laurent22/joplin-android/releases
 - name: Kanji Dojo
   authors: Yaroslav Shuliak
   category: education
@@ -867,6 +878,17 @@
   verified: true
   releases:
     url: https://github.com/Aefyr/SAI/releases
+- name: Seal
+  authors: junkfood
+  category: tools
+  commercial: false
+  description: Video/Audio Downloader for Android, based on yt-dlp
+  icon: https://raw.githubusercontent.com/JunkFood02/Seal/refs/heads/main/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png
+  id: com.junkfood.seal
+  type: curated
+  verified: true
+  releases:
+    url: https://github.com/JunkFood02/Seal/releases
 - name: Session
   authors: Session Technology Foundation
   category: communication
@@ -889,6 +911,17 @@
   verified: false
   releases:
     url: https://github.com/MuntashirAkon/SetEdit/releases
+- name: Shadowsocks
+  authors: Shadowsocks
+  category: tools
+  commercial: false
+  description: A fast tunnel proxy that helps you bypass firewalls
+  icon: https://raw.githubusercontent.com/shadowsocks/shadowsocks-android/refs/heads/master/core/src/main/res/mipmap-xxxhdpi/ic_launcher.webp
+  id: com.github.shadowsocks
+  type: curated
+  verified: false
+  releases:
+    url: https://github.com/shadowsocks/shadowsocks-android/releases
 - name: Signal
   authors: Signal
   category: communication
