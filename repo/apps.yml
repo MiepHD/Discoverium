@@ -32,7 +32,7 @@
   releases:
     url: https://github.com/TeamAmaze/AmazeFileManager/releases
 - name: Aliucord Manager
-  authors: Aliucord
+  authors: rushii
   category: communication
   commercial: false
   description: The new way to install Aliucord – a mod for the Android Discord app - in a user-friendly way
@@ -867,28 +867,6 @@
   verified: true
   releases:
     url: https://github.com/shub39/Rush/releases
-- name: SAI
-  authors: Aefyr
-  category: tools
-  commercial: false
-  description: SAI (Split APKs Installer) is an Android app that lets you install split APKs (such as ones distributed as Android App Bundle). It has both rooted and rootless installation methods.
-  icon: https://raw.githubusercontent.com/Aefyr/SAI/refs/heads/master/app/src/main/res/drawable-xxxhdpi/logo.png
-  id: com.aefyr.sai
-  type: curated
-  verified: true
-  releases:
-    url: https://github.com/Aefyr/SAI/releases
-- name: Seal
-  authors: junkfood
-  category: tools
-  commercial: false
-  description: Video/Audio Downloader for Android, based on yt-dlp
-  icon: https://raw.githubusercontent.com/JunkFood02/Seal/refs/heads/main/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png
-  id: com.junkfood.seal
-  type: curated
-  verified: true
-  releases:
-    url: https://github.com/JunkFood02/Seal/releases
 - name: Session
   authors: Session Technology Foundation
   category: communication
@@ -911,17 +889,6 @@
   verified: false
   releases:
     url: https://github.com/MuntashirAkon/SetEdit/releases
-- name: Shadowsocks
-  authors: Shadowsocks
-  category: tools
-  commercial: false
-  description: A fast tunnel proxy that helps you bypass firewalls
-  icon: https://raw.githubusercontent.com/shadowsocks/shadowsocks-android/refs/heads/master/core/src/main/res/mipmap-xxxhdpi/ic_launcher.webp
-  id: com.github.shadowsocks
-  type: curated
-  verified: false
-  releases:
-    url: https://github.com/shadowsocks/shadowsocks-android/releases
 - name: Signal
   authors: Signal
   category: communication
@@ -967,7 +934,7 @@
   releases:
     url: https://github.com/cygnusx-1-org/Slide/releases
 - name: SmartTube
-  authors: Yuriy L
+  authors: Yuriy L. Orlov
   category: entertainment
   commercial: false
   description: Browse media content with your own rules on Android TV
