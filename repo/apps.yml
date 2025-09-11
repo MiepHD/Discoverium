@@ -406,7 +406,7 @@
   releases:
     url: https://github.com/T8RIN/ImageToolbox/releases
 - name: IronFox
-  authors: IronFox OSS
+  authors: celenity
   category: browsers
   commercial: false
   description: The private, secure, user first web browser for Android.
@@ -626,7 +626,7 @@
   releases:
     url: https://github.com/meshtastic/Meshtastic-Android/releases
 - name: MicroG
-  authors: MicroG
+  authors: Marvin W
   category: tools
   commercial: false
   description: microG Services is a FLOSS (Free/Libre Open Source Software) framework to allow applications designed for Google Play Services to run on systems, where Play Services is not available.
