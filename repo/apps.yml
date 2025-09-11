@@ -43,7 +43,7 @@
   releases:
     url: https://github.com/NQM-Gaming/Aneko/releases
 - name: Antimine
-  authors: Lucas Lima
+  authors: Lucas Nunes de Lima
   category: games
   commercial: false
   description: Antimine is a minesweeper-like puzzle game. The objective is to flag the spaces with mines to make the field a safer place without exploding any of them.
