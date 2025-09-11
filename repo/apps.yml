@@ -31,17 +31,6 @@
   verified: true
   releases:
     url: https://github.com/TeamAmaze/AmazeFileManager/releases
-- name: Aliucord Manager
-  authors: rushii
-  category: communication
-  commercial: false
-  description: The new way to install Aliucord – a mod for the Android Discord app - in a user-friendly way
-  icon: https://raw.githubusercontent.com/Aliucord/Manager/refs/tags/v1.0.3/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png
-  id: com.aliucord.manager
-  type: curated
-  verified: true
-  releases:
-    url: https://github.com/Aliucord/Manager/releases
 - name: ANeko
   authors: Nguyễn Quang Minh
   category: games
@@ -109,7 +98,7 @@
   releases:
     url: https://github.com/markusfisch/BinaryEye
 - name: Birday
-  authors: minar
+  authors: Gianluca Conti
   category: productivity
   commercial: false
   description: A beautiful Kotlin app to remember birthdays and events without having to open Facebook, set alarms or rely on Google Calendar
@@ -405,17 +394,6 @@
   verified: true
   releases:
     url: https://github.com/T8RIN/ImageToolbox/releases
-- name: IronFox
-  authors: celenity
-  category: browsers
-  commercial: false
-  description: The private, secure, user first web browser for Android.
-  icon: https://gitlab.com/ironfox-oss/IronFox/-/raw/dev/assets/ironfox.png
-  id: org.ironfoxoss.ironfox
-  type: submitted
-  verified: true
-  releases:
-    url: https://gitlab.com/ironfox-oss/IronFox/-/releases
 - name: Jerboa
   authors: Tyler Houlihan
   category: social
@@ -461,7 +439,7 @@
   releases:
     url: https://github.com/Predidit/Kazumi/releases
 - name: KeePass2Android
-  authors: PhilippC
+  authors: Philipp Crocoll
   category: security
   commercial: false
   description: Password manager for Android that allows editing encrypted data in a single file in KeePass format and fill in the forms in a secure way.
@@ -472,7 +450,7 @@
   releases:
     url: https://github.com/PhilippC/keepass2android/releases
 - name: KeePassDroid
-  authors: bpellin
+  authors: Brian Pellin
   category: security
   commercial: false
   description: KeePass implementation for android (read-only)
@@ -626,7 +604,7 @@
   releases:
     url: https://github.com/meshtastic/Meshtastic-Android/releases
 - name: MicroG
-  authors: Marvin W
+  authors: Marvin Wißfeld
   category: tools
   commercial: false
   description: microG Services is a FLOSS (Free/Libre Open Source Software) framework to allow applications designed for Google Play Services to run on systems, where Play Services is not available.
