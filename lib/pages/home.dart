@@ -75,11 +75,11 @@ class _HomePageState extends State<HomePage> {
                     GestureDetector(
                         onTap: () {
                           launchUrlString(
-                              'https://github.com/cygnusx-1-org/Discoverium/blob/main/README.md',
+                              'https://github.com/MiepHD/DiscoverItAll/blob/main/README.md',
                               mode: LaunchMode.externalApplication);
                         },
                         child: Text(
-                          'https://github.com/cygnusx-1-org/Discoverium/blob/main/README.md',
+                          'https://github.com/MiepHD/DiscoverItAll/blob/main/README.md',
                           style: const TextStyle(
                               decoration: TextDecoration.underline,
                               fontWeight: FontWeight.bold),

@@ -191,7 +191,7 @@ class GitHub extends AppSource {
 
       // Fetch apps.yml from Discoverium repository
       final appsResponse = await get(
-        Uri.parse('https://raw.githubusercontent.com/cygnusx-1-org/Discoverium/refs/heads/$branch/repo/apps.yml'),
+        Uri.parse('https://raw.githubusercontent.com/MiepHD/DiscoverItAll/refs/heads/$branch/repo/apps.yml'),
       );
 
       if (appsResponse.statusCode != 200) {

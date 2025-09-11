@@ -1,9 +1,11 @@
 # Discoverium
 
 ## How it works
-1. App authors put a `discoverium.yml` in their git repository
+
+1. App source gets added to `repo/apps.yml`
 
 Example:
+
 ```
 app:
   name: Slide
@@ -16,6 +18,7 @@ app:
 ```
 
 Required fields:
+
 ```
 name
 authors
@@ -25,8 +28,4 @@ icon
 releases url
 ```
 
-Find categories [here](https://github.com/cygnusx-1-org/Discoverium/blob/main/repo/categories.yml).
-
-2. A [script](https://github.com/cygnusx-1-org/Discoverium/blob/main/scripts/build_repo.sh) retrieves all the URLs listed in [apps.yml](https://github.com/cygnusx-1-org/Discoverium/blob/main/apps.yml) and assembles it into [repo/apps.yml](https://github.com/cygnusx-1-org/Discoverium/blob/main/repo/apps.yml).
-
-3. [Discoverium](https://github.com/cygnusx-1-org/Discoverium) loads [repo/apps.yml](https://github.com/cygnusx-1-org/Discoverium/blob/main/repo/apps.yml) and populates the list.
+Find categories [here](https://github.com/MiepHD/DiscoverItAll/blob/main/repo/categories.yml).

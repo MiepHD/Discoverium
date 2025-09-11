@@ -16,7 +16,7 @@ import 'package:shared_storage/shared_storage.dart' as saf;
 
 String obtainiumTempId = 'cygnusx-1-org_obtainium_${GitHub().hosts[0]}';
 String obtainiumId = 'org.cygnusx1.discoverium';
-String obtainiumUrl = 'https://github.com/cygnusx-1-org/Discoverium';
+String obtainiumUrl = 'https://github.com/MiepHD/DiscoverItAll';
 Color obtainiumThemeColor = const Color(0xFF6438B5);
 
 enum ThemeSettings { system, light, dark }
@@ -30,7 +30,7 @@ class SettingsProvider with ChangeNotifier {
   String? defaultAppDir;
   bool justStarted = true;
 
-  String sourceUrl = 'https://github.com/cygnusx-1-org/Discoverium';
+  String sourceUrl = 'https://github.com/MiepHD/DiscoverItAll';
 
   // Not done in constructor as we want to be able to await it
   Future<void> initializeSettings() async {
