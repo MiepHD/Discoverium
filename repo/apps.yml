@@ -41,7 +41,7 @@
   type: curated
   verified: true
   releases:
-    url: https://github.com/Aliucord/Aliucord/releases
+    url: https://github.com/Aliucord/Manager/releases
 - name: ANeko
   authors: Nguyễn Quang Minh
   category: games
@@ -999,17 +999,6 @@
   verified: false
   releases:
     url: https://github.com/axel-cu/SmartDock/releases
-- name: SMS Ping
-  authors: ITDS Consulting, s.r.o.
-  category: tools
-  commercial: false
-  description: Silent Ping SMS for Android (does not require rooted device)
-  icon: https://raw.githubusercontent.com/itds-consulting/android-silent-ping-sms/refs/heads/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png
-  id: com.itds.sms.ping
-  type: curated
-  verified: false
-  releases:
-    url: https://github.com/itds-consulting/android-silent-ping-sms/releases
 - name: Suntimes
   authors: Forrest Guice
   category: tools
